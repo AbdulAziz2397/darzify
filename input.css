@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+.max-w-9xl {
+    max-width: 1580px;
+}
+
+.hero-inner-div .swiper-pagination-bullet {
+    width: 60px;
+    height: 6px;
+    background: #333331;
+    opacity: 0.3;
+    margin: 0 6px;
+    border-radius: 4px;
+    /* Changed from 50% for rectangle shape */
+    transition: all 0.3s ease;
+}
+
+.hero-inner-div .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #333331;
+}
+
+.swiper-navigation-icon {
+    height: 24px !important;
+    fill: #333331 !important;
+    fill: none;
+    pointer-events: none;
+    display: none;
+}
+
+@media (max-width: 475px) {
+    .hero-inner-div .swiper-pagination-bullet {
+        width: 35px;
+    }
+}
