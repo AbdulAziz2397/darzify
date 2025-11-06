@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file -->
+    <link href="./tailwind.css" rel="stylesheet">
+    <link href="./input.css" rel="stylesheet">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Jost and Roboto Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- twilio CDN link for mobile inout field -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/css/intlTelInput.css">
+
+    <!-- Title -->
+    <title>Darzify</title>
+</head>
+
+<body class="bg-[#ECE6DF] overflow-hidden">
+    <!--======================== Header =======================-->
+    <header class="bg-[#333331]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="h-16 md:h-20 xl:h-24 flex justify-between items-center">
+                <div class=" flex justify-start items-center gap-2.5">
+                    <div><span
+                            class="uppercase text-[28px] md:text-3xl xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
+                    </div>
+                    <div class="flex items-center text-[#EAE0D6] gap-1 md:gap-1.5">
+                        <img src="./assets/icons/location-pin.png" class=" size-6 md:size-5 xl:size-6"
+                            alt="location-pin">
+                        <span class="text-xl xl:text-2xl font-medium font-['Jost'] hidden md:block ">Gaur City 2,
+                            Noida</span>
+                        <i class="fa-solid fa-chevron-down text-base md:text-sm xl:text-base"></i>
+                    </div>
+                </div>
+                <div class="w-auto lg:w-1/2 flex justify-end gap-2.5">
+                    <div
+                        class="w-auto lg:w-full lg:max-w-80 xl:max-w-96 flex items-center border border-[#EAE0D6] rounded-lg sm:rounded-xl h-8 sm:h-10 md:h-11 xl:h-14">
+                        <img src="./assets/icons/magnifying-glass.png"
+                            class="size-4 sm:size-5 xl:size-6 mx-1.5 sm:mx-2 md:mx-3" alt="magnifying-glass" />
+                        <input type="text" placeholder="Search for ‘boutiques’"
+                            class="text-xl placeholder:text-[#6E6E6E] text-[#EAE0D6] font-['Roboto'] h-10 md:h-11 xl:h-14 w-full outline-none border-none hidden lg:block">
+                    </div>
+                    <button
+                        class="text-[#333331] bg-[#ECE6DF] cursor-pointer lg:w-32 xl:w-36 h-8 sm:h-10 md:h-11 xl:h-14 rounded-lg sm:rounded-xl flex justify-center items-center gap-4">
+                        <i class="fa-regular fa-user mx-1.5 sm:mx-2 md:mx-3 lg:mx-0 text-lg sm:text-xl xl:text-2xl"></i>
+                        <span class="text-lg hidden font-['Roboto'] lg:block">Sign In</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--======================== Navbar =======================-->
+    <nav class="bg-[#EAE0D6]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="h-14 md:h-16 xl:h-20 flex gap-10 sm:gap-12 md:gap-14 lg:gap-16 xl:gap-20">
+                <a href="./index.html"
+                    class="h-full flex items-center font-['Roboto'] font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] text-[#6E6E6E] after:content-[''] relative after:absolute after:left-0 after:bottom-0 after:rounded-t-lg after:h-1.5 after:bg-[#333331] after:w-full"><span>Home</span></a>
+                <a href="./index.html"
+                    class="h-full flex items-center font-['Roboto'] font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] text-[#6E6E6E] after:content-[''] relative after:absolute after:left-0 after:bottom-0 after:rounded-t-lg after:h-1.5 after:bg-[#333331] hover:after:w-full"><span>Boutiques</span></a>
+                <a href="./index.html"
+                    class="h-full flex items-center font-['Roboto'] font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[26px] text-[#6E6E6E] after:content-[''] relative after:absolute after:left-0 after:bottom-0 after:rounded-t-lg after:h-1.5 after:bg-[#333331] hover:after:w-full"><span>Profile</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!--======================== Hero =======================-->
+    <section class="mt-10">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="hero-inner-div flex justify-between relative">
+                <div class="swiper mySwiper overflow-y-visible! overflow-x-hidden! z-20!">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./assets/images/slider.png"
+                                class=" w-3xl max-h-[440px] rounded-2xl object-cover" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/images/slider.png"
+                                class=" w-3xl max-h-[440px] rounded-2xl object-cover" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/images/slider.png"
+                                class=" w-3xl max-h-[440px] rounded-2xl object-cover" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/images/slider.png"
+                                class=" w-3xl max-h-[440px] rounded-2xl object-cover" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/images/slider.png"
+                                class=" w-3xl max-h-[440px] rounded-2xl object-cover" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/images/slider.png"
+                                class=" w-3xl max-h-[440px] rounded-2xl object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="swiper-button-next hidden! md:flex! border-2 absolute -right-9! rounded-full size-12! md:size-14! lg:size-16! border-[#B0B0AB] z-10">
+                    <i class="fa-solid fa-chevron-right text-[#333331] text-2xl"></i>
+                </div>
+                <div
+                    class="swiper-button-prev hidden! md:flex!  absolute -left-9! rounded-full size-12! md:size-14! lg:size-16! border-2 border-[#B0B0AB] z-10">
+                    <i class="fa-solid fa-chevron-left text-[#333331] text-2xl"></i>
+                </div>
+                <div class="swiper-pagination absolute! -bottom-10! z-50!"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Services section ================== -->
+    <section class="my-40">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 content-center justify-items-center">
+                <div
+                    class="size-72 sm:size-64 md:size-44 lg:size-56 xl:size-64 border-2 border-[#333331] rounded-4xl flex flex-col justify-center items-center gap-4 lg:gap-8">
+                    <img src="./assets/icons/mask-group (1).png" alt="">
+                    <h5 class="font-['Roboto'] font-medium text-[#00000] text-2xl md:text-xl lg:text-2xl text-center">
+                        Tailor</h5>
+                </div>
+                <div
+                    class="size-72 sm:size-64 md:size-44 lg:size-56 xl:size-64 border-2 border-[#333331] rounded-4xl flex flex-col justify-center items-center gap-4 lg:gap-8">
+                    <img src="./assets/icons/mask-group (2).png" alt="">
+                    <h5 class="font-['Roboto'] font-medium text-[#00000] text-2xl md:text-xl lg:text-2xl text-center">
+                        Boutiques
+                    </h5>
+                </div>
+                <div
+                    class="size-72 sm:size-64 md:size-44 lg:size-56 xl:size-64 border-2 border-[#333331] rounded-4xl flex flex-col justify-center items-center gap-4 lg:gap-8">
+                    <img src="./assets/icons/mask-group (3).png" alt="">
+                    <h5 class="font-['Roboto'] font-medium text-[#00000] text-2xl md:text-xl lg:text-2xl text-center">
+                        Designers
+                    </h5>
+                </div>
+                <div
+                    class="size-72 sm:size-64 md:size-44 lg:size-56 xl:size-64 border-2 border-[#333331] rounded-4xl flex flex-col justify-center items-center gap-4 lg:gap-8">
+                    <img src="./assets/icons/mask-group (4).png" alt="">
+                    <h5 class="font-['Roboto'] font-medium text-[#00000] text-2xl md:text-xl lg:text-2xl text-center">
+                        Handlooms
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Boutiques section ================== -->
+    <section>
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div
+                class="border-[2.5px] rounded-2xl md:rounded-3xl lg:rounded-[38px] xl:rounded-[50px] border-[#533E00] bg-[#EAE0D6] py-6 md:py-8 lg:py-10 xl:py-12 pl-6 md:pl-8 lg:pl-10 xl:pl-12 flex flex-col gap-8 md:gap-14 xl:gap-[70px]">
+                <h2 class="font-['Roboto'] text-4xl md:text-5xl lg:text-6xl">
+                    <span class="font-normal italic">Boutiques</span>
+                    <span class="font-bold">Near By</span>
+                </h2>
+
+                <div>
+                    <div class="swiper mySwiper2 overflow-visible z-20">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide w-44! lg:w-48!">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Top Rated Tailors section ================== -->
+    <section class="my-20 overflow-hidden bg-[#E0D8D2]">
+        <div class="w-full max-w-10xl mx-auto pl-5 md:pl-8 lg:pl-10 xl:pl-20 2xl:pl-40">
+            <div
+                class="flex flex-col md:flex-row py-12 md:py-16 lg:py-20 xl:py-24 gap-20 md:gap-0 gap-x-12 md:gap-x-16 lg:gap-x-20 xl:gap-x-24">
+                <div class="flex flex-col gap-10 md:gap-y-0 items-center md:items-start md:justify-between">
+                    <div>
+                        <h4
+                            class="font-['Roboto'] text-center font-medium text-[#333331] text-nowrap uppercase text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                            Top Rated</h4>
+                        <h2
+                            class="font-['Roboto'] text-center font-black text-[#333331] uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+                            Tailors</h2>
+                    </div>
+                    <button
+                        class="w-40 md:w-44 lg:w-48 xl:w-52 h-10 md:h-12 lg:h-14 xl:h-16 cursor-pointer rounded-lg md:rounded-xl lg:rounded-2xl bg-[#333331] text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-medium text-white">View
+                        All >
+                    </button>
+                </div>
+
+                <div class="max-w-full">
+                    <div class="swiper mySwiper3 overflow-visible z-20">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide w-44! lg:w-48!">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-44! lg:w-48! ">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="size-36 md:size-40 lg:size-44 xl:size-48 rounded-[20px] object-cover" />
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 lg:gap-2 mt-10">
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-[#333331] text-[22px] lg:text-2xl text-center">
+                                        Karina Tailor</h5>
+                                    <p class="flex items-center gap-2.5 justify-center"><img
+                                            src="./assets/icons/location-pin-dark.png" class="size-5" alt=""><span
+                                            class="font-['Roboto'] font-medium text-[#6E6E6E] text-[20px]">Gaur
+                                            City 1</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Banner section ================== -->
+    <section class="my-20">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 px-5 md:px-10 lg:px-20 bg-[linear-gradient(140deg,#333331,#2D2012)] rounded-3xl md:rounded-4xl">
+                <div class="mr-auto my-auto py-9">
+                    <h2
+                        class="font-['Roboto'] font-bold sm:text-nowrap text-3xl md:text-3xl lg:text-4xl xl:text-[54px] text-[#FFFFFF] pb-6 md:pb-11 xl:pb-[50px] ">
+                        <span class="mr-2">Struggling to find </span><br> <span class="italic font-light mr-2"> best
+                            tailors</span> near you?
+                    </h2>
+                    <button
+                        class="bg-[#EAE0D6] w-60 md:w-64 lg:w-72 xl:w-80 h-10 md:h-12 lg:h-14 xl:h-16 flex justify-center items-center gap-5 rounded-4xl cursor-pointer">
+                        <img src="./assets/icons/magnifying-glass.png" class="size-7" alt="">
+                        <span
+                            class="font-['Roboto'] font-medium text-lg md:text-xl lg:text-[22px] xl:text-2xl italic text-[#000000]">Click
+                            here and explore</span>
+                    </button>
+                </div>
+                <img src="./assets/images/tailor-setup.png" class="ml-auto mt-auto w-sm lg:w-md xl:w-lg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="my-20 overflow-hidden bg-[#E0D8D2]">
+        <div class="w-full max-w-10xl mx-auto pl-5 md:pl-8 lg:pl-10 xl:pl-20 2xl:pl-40">
+            <div class="flex flex-col py-12 md:py-16 lg:py-20 xl:py-24 gap-12 md:gap-16 lg:gap-20 xl:gap-24">
+                <div class="flex flex-col gap-10 md:gap-y-0 items-center md:items-start md:justify-between">
+                    <h2
+                        class="font-['Roboto'] text-center font-black text-[#333331] uppercase text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+                        BEST DESIGNERS IN TOWN
+                    </h2>
+                </div>
+
+                <div class="max-w-full">
+                    <div class="swiper mySwiper3 overflow-visible! z-20">
+                        <div class="swiper-wrapper overflow-visible!">
+
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto! overflow-visible! backface-visible">
+                                <div class="relative w-full flex flex-col items-center">
+                                    <img src="./assets/images/bouti-1.png"
+                                        class="h-52 md:h-68 lg:h-72 xl:h-80 w-40 md:w-48 lg:w-52 xl:w-60 rounded-[20px] object-cover" />
+                                    <h5
+                                        class="font-['Roboto'] font-semibold text-white text-base md:text-lg lg:text-xl xl:text-2xl text-center absolute bottom-5">
+                                        Karina Tailor
+                                    </h5>
+                                    <div
+                                        class="absolute -bottom-4.5 bg-[#333331] flex items-baseline-last pb-0.5 justify-center w-20 h-9 gap-2.5 rounded-full z-auto">
+                                        <img src="./assets/icons/star.png" class="size-4" alt="">
+                                        <span class="font-['Roboto'] font-semibold text-white text-[20px]">4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="w-40 md:w-44 lg:w-48 xl:w-52 h-10 md:h-12 lg:h-14 xl:h-16 cursor-pointer rounded-lg md:rounded-xl lg:rounded-2xl bg-[#333331] text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-medium text-white">
+                    Explore More >
+                </button>
+
+            </div>
+        </div>
+    </section>
+    <!-- ================= Banner section ================== -->
+    <section class="my-20">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 px-5 md:px-10 lg:px-20 py-9 bg-[linear-gradient(140deg,#333331,#2D2012)] rounded-3xl md:rounded-4xl">
+                <div class="mr-auto mb-auto">
+                    <div>
+                        <h2
+                            class="font-['Roboto'] font-semibold text-3xl md:text-4xl lg:text-5xl xl:text-5xl text-[#FFFFFF]">
+                            Don't miss out on the perfect fit!
+                        </h2>
+                        <p
+                            class="font-['Roboto'] font-normal text-lg md:text-xl lg:text-[22px] xl:text-2xl text-[#6E6E6E] my-3 lg:my-6">
+                            Add your size or
+                            measurements now for a smooth order and perfect fit</p>
+                    </div>
+                    <button class="w-auto cursor-pointer mt-auto">
+                        <span
+                            class="font-['Roboto'] font-bold text-lg md:text-xl lg:text-[22px] xl:text-2xl text-[#CD6250] capitalize">
+                            Add my size now >
+                        </span>
+                    </button>
+                </div>
+                <img src="./assets/images/OBJECTS.png" class="md:w-56 lg:w-60 xl:w-72 ml-auto" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Footer ================== -->
+    <section class="mt-20 bg-[#EAE0D6]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div
+                class="flex flex-wrap gap-10 justify-between pt-32 md:pt-40 lg:pt-48 xl:pt-56 pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+                <div class="max-w-sm flex gap-8 flex-col">
+                    <img src="./assets/images/footer-logo.png" class="w-32 md:w-36" alt="">
+                    <p class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
+                    <div class="flex items-baseline-last gap-6 ">
+                        <a href="#"><img src="./assets/icons/Facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="./assets/icons/Twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="./assets/icons/Instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="./assets/icons/LinkedIn.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="./assets/icons/YouTube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3
+                        class="font-['Roboto'] font-bold text-xl md:text-[22px] lg:text-2xl xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Product</h3>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Features</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Pricing</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Case
+                        studies</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Reviews</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Updates</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3
+                        class="font-['Roboto'] font-bold text-xl md:text-[22px] lg:text-2xl xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Company</h3>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">About</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Contact
+                        us</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Careers</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Culture</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Blog</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3
+                        class="font-['Roboto'] font-bold text-xl md:text-[22px] lg:text-2xl xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Support</h3>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Getting
+                        started</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Help
+                        center</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Server
+                        status</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Report
+                        a bug</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Chat
+                        support</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3
+                        class="font-['Roboto'] font-bold text-xl md:text-[22px] lg:text-2xl xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Contact us</h3>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1"><img
+                            src="./assets/icons/Email.png" class="object-contain" alt="">contact@company.com</a>
+                    <a href="#"
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1"><img
+                            src="./assets/icons/Phone.png" class="object-contain" alt="">(414) 687 - 5892</a>
+                    <span
+                        class="text-lg md:text-xl lg:text-[22px] xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1"><img
+                            src="./assets/icons/Mark.png" class="object-contain" alt="">794 Mcallister St San Francisco,
+                        94102</span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 md:flex-row items-center  md:justify-between pb-2 md:pb-4 lg:pb-6 xl:pb-8">
+                <p
+                    class="font-['DM_Sans'] text-[#6F6C90] font-normal text-base sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl">
+                    Copyright © 2025 Darzify
+                </p>
+                <div class="text-center">
+                    <span
+                        class="font-['DM_Sans'] text-[#6F6C90] font-normal text-base sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl">All
+                        Rights Reserved</span>
+                    |
+                    <a href="#"
+                        class="font-['DM_Sans'] text-[#333331] font-normal text-base sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl">Terms
+                        and Conditions</a>
+                    |
+                    <a href="#"
+                        class="font-['DM_Sans'] text-[#333331] font-normal text-base sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl">Privacy
+                        Policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= Login with Phone Popup ================== -->
+    <div class="w-full max-w-screen max-h-screen fixed inset-0 bg-black/40 z-50 flex justify-center items-center mx-auto py-5 md:py-8 lg:py-12 xl:py-16 2xl:py-20 px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+        <div class="bg-[#ECE6DF] relative w-full max-w-sm md:max-w-2xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl max-h-[594px] rounded-2xl md:rounded-3xl lg:rounded-4xl flex">
+            <button class="absolute right-5 top-3 sm:right-5 sm:top-5 md:right-7 md:top-7 cursor-pointer">
+                <i class="fa-solid fa-xmark text-xl lg:text-2xl"></i>
+            </button>
+            <div class="w-1/2 relative hidden md:block overflow-hidden z-10">
+                <div class="absolute w-1/3 h-full right-0 bg-[linear-gradient(to_right,transparent,#ECE6DF)] z-40"></div>
+                <img src="./assets/images/login-overly.jpg" class="absolute size-full opacity-20 inset-0 z-30 rounded-4xl" alt="">
+                <img src="./assets/images/login-img (1).png" class="w-full h-1/3 object-cover px-5 rounded-4xl pt-5" alt="">
+                <div class="flex w-full h-full z-20">
+                    <img src="./assets/images/login-img (1).jpg" class="w-1/2 h-2/3 py-5 pl-5 pr-0 mr-1 rounded-4xl object-cover" alt="">
+                    <div class="bg-[#ECE6DF] w-1/2 h-3/4 rounded-3xl z-20 absolute right-0 bottom-0">
+                        <img src="./assets/images/login-img (2).jpg" class="w-full h-full py-5 pl-5 pr-5 rounded-4xl object-cover" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col p-5 sm:p-7 md:py-10">
+                <form class="w-full h-full flex flex-col justify-between gap-5">
+                    <div class="flex flex-col gap-y-5 xl:gap-y-8">
+                        <div>
+                            <h3 class="font-['Roboto'] font-bold text-2xl lg:text-3xl xl:text-4xl mb-2">Get Started Now</h3>
+                            <p class="font-['Roboto'] font-normal text-xs md:text-sm lg:text-base xl:text-lg text-[#5D5D5D]">
+                                Create an account or log in to explore our app
+                            </p>
+                        </div>
+
+                        <div class="w-full">
+                            <input id="phone" placeholder="Enter mobile number" class="w-full py-2 md:py-2.5 lg:py-3 xl:py-4 font-['Roboto'] outline-none [appearance:textfield] 
+                            [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none 
+                            placeholder:text-[#5D5D5D]" type="number">
+                        </div>
+
+                        <div class="w-full flex items-center gap-2.5">
+                            <div class="w-full border-t border-transparent [border-image:linear-gradient(to_right,transparent,#333331)_1]"></div>
+                            <span class="text-nowrap">Or use</span>
+                            <div class="w-full border-t border-transparent [border-image:linear-gradient(to_left,transparent,#333331)_1]"></div>
+                        </div>
+
+                        <div class="w-full flex justify-center mx-auto gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
+                            <a href="#" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
+                                <img src="./assets/icons/mail.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5" alt="">
+                            </a>
+                            <a href="#" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
+                                <img src="./assets/icons/google.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex mt-3 font-['Roboto'] items-center font-normal text-xs lg:text-sm text-nowrap flex-nowrap">
+                            <div class="mb-auto">
+                                <img src="./assets/icons/group 14.png" class="size-3.5 lg:size-5 object-contain mt-0.5 mr-2" alt="">
+                            </div>
+                            <p>
+                                By continuing, you agree to our <span class="ml-1 font-semibold text-wrap"> Terms of Use & Privacy Policy</span>
+                            </p>
+                        </div>
+                        
+                        <button class="mt-2.5 sm:mt-3 md:mt-3.5 lg:mt-4 xl:mt-5 w-full text-center py-2.5 md:py-3 lg:py-3.5 xl:py-4  bg-[#333331] cursor-pointer rounded-full text-white font-semibold text-xs md:text-sm lg:text-base xl:text-lg">
+                            Send OTP
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= Scripts ================== -->
+    <!-- tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- twilio script for mobile inout field -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        const output = document.querySelector("#output");
+
+        const iti = window.intlTelInput(input, {
+            initialCountry: "in",
+            nationalMode: true,
+            loadUtils: () => import("/intl-tel-input/js/utils.js?1761771962076"), // for formatting/placeholders etc
+            separateDialCode: true,
+            loadUtils: () => import("/intl-tel-input/js/utils.js?1761771962076"), // for formatting/placeholders etc
+        });
+
+        const handleChange = () => {
+            let text;
+            if (input.value) {
+                text = iti.isValidNumber()
+                    ? "Valid number! Full international format: " + iti.getNumber()
+                    : "Invalid number - please try again";
+            } else {
+                text = "Please enter a valid number below";
+            }
+            const textNode = document.createTextNode(text);
+            output.innerHTML = "";
+            output.appendChild(textNode);
+        };
+
+        // listen to "keyup", but also "change" to update when the user selects a country
+        input.addEventListener('change', handleChange);
+        input.addEventListener('keyup', handleChange);
+    </script>
+
+    <!-- Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        // ==================== font seoul-namsan ===============
+        (function (d) {
+            var config = {
+                kitId: 'pug2vcj',
+                scriptTimeout: 3000,
+                async: true,
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+
+        // ================ Swiper Js =====================
+
+        // Hero Swiper
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            centeredSlides: false,
+            spaceBetween: 30,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+
+            keyboard: {
+                enabled: true,
+            },
+
+            breakpoints: {
+                475: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                },
+                0: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                }
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        //  Boutiques Swiper
+        var swiper = new Swiper(".mySwiper2", {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 30,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 30,
+                },
+                1024: {
+                    spaceBetween: 20,
+                },
+                768: {
+                    spaceBetween: 12,
+                },
+                0: {
+                    spaceBetween: 8,
+                }
+            }
+        });
+
+        //  Top rated tailor Swiper
+        var swiper = new Swiper(".mySwiper3", {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 30,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 30,
+                },
+                1024: {
+                    spaceBetween: 20,
+                },
+                768: {
+                    spaceBetween: 12,
+                },
+                0: {
+                    spaceBetween: 8,
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

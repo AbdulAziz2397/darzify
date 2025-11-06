@@ -27,14 +27,106 @@
 
 .swiper-navigation-icon {
     height: 24px !important;
-    fill: #333331 !important;
-    fill: none;
     pointer-events: none;
     display: none;
+}
+
+/* OTP verification style code */
+#otp-input {
+  display: flex;
+  gap: 0.5em;
+}
+#otp-input input {
+  /* padding: 0.5em 0; */
+  text-align: center;
+}
+
+
+/* hide spinner */
+#otp-input input::-webkit-outer-spin-button,
+#otp-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* #otp-input input[type=number] {
+  -moz-appearance:textfield;
+} */
+
+/*  */
+
+div.iti.iti--allow-dropdown {
+    width: 100%;
+    border: 2px solid #333331 !important;
+    border-radius: 50px;
+    font-family: 'Roboto';
+    padding: 2px 0px 2px 50px !important;
+    font-size: 18px;
+}
+
+div.iti__country-container {
+    padding: 16px 0px 16px 30px !important;
+}
+
+.iti__selected-country-primary {
+    transform: scale(1.4);
+    margin-right: 10px !important;
+}
+
+.iti__search-input {
+    outline: none;
 }
 
 @media (max-width: 475px) {
     .hero-inner-div .swiper-pagination-bullet {
         width: 25px;
+    }
+}
+
+
+@media (max-width: 1279px) {
+    .iti__selected-country-primary {
+        transform: scale(1.3);
+        margin-right: 8px !important;
+    }
+
+    div.iti__country-container {
+        padding: 14px 0px 14px 24px !important;
+    }
+
+    div.iti.iti--allow-dropdown {
+        padding: 2px 0px 2px 35px !important;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .iti__selected-country-primary {
+        transform: scale(1.2);
+        margin-right: 6px !important;
+    }
+
+    div.iti__country-container {
+        padding: 12px 0px 12px 20px !important;
+    }
+
+    div.iti.iti--allow-dropdown {
+        padding: 2px 0px 2px 25px !important;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .iti__selected-country-primary {
+        transform: scale(1.1);
+        margin-right: 4px !important;
+    }
+
+    div.iti__country-container {
+        padding: 10px 0px 10px 18px !important;
+    }
+
+    div.iti.iti--allow-dropdown {
+        padding: 2px 0px 2px 20px !important;
+        font-size: 12px;
     }
 }
