@@ -27,17 +27,18 @@
     <title>Darzify</title>
 </head>
 
-<body class="bg-[#ECE6DF]">
+<body class="bg-[#ECE6DF] overflow-hidden">
     <!--======================== Header =======================-->
     <header class="bg-[#333331]">
         <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
             <div class="h-16 md:h-20 xl:h-24 flex justify-between items-center">
                 <div class=" flex justify-start items-center gap-2.5">
-                    <div>
-                        <span class="uppercase text-[28px] md:text-3xl xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
+                    <div><span
+                            class="uppercase text-[28px] md:text-3xl xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
                     </div>
                     <div class="flex items-center text-[#EAE0D6] gap-1 md:gap-1.5">
-                        <img src="./assets/icons/location-pin.png" class=" size-6 md:size-5 xl:size-6" alt="location-pin">
+                        <img src="./assets/icons/location-pin.png" class=" size-6 md:size-5 xl:size-6"
+                            alt="location-pin">
                         <span class="text-xl xl:text-2xl font-medium font-['Jost'] hidden md:block ">Gaur City 2, Noida</span>
                             <button class="cursor-pointer">
                                 <i class="fa-solid fa-chevron-down text-base md:text-sm xl:text-base"></i>
@@ -60,60 +61,142 @@
         </div>
     </header>
 
-    <!-- ================= Measurement ================== -->
+    <!-- ================= Manage Account ================== -->
 
     <section class="mt-5 md:mt-7 lg:mt-9 xl:mt-12 mb-52 sm:mb-56 md:mb-60 lg:mb-64 xl:mb-72 2xl:mb-80">
         <div class="mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
-            <div class="w-full max-w-[1348px] mx-auto">
-                <div class="w-full flex justify-between items-center">
-                    <div>
-                        <button class="font-['Roboto'] cursor-pointer font-medium text-base md:text-lg lg:text-xl xl:text-2xl mr-3 md:mr-5 lg:mr-8 xl:mr-12"><i class="fa-solid fa-chevron-left"></i></button>
-                        <span class="font-['Roboto'] font-medium text-base md:text-lg lg:text-xl xl:text-2xl">Shirt</span>
-                    </div>
-                    <span class="font-['Jost'] font-normal text-sm lg:text-base xl:text-lg">
-                        Home/ profile
-                    </span>
+            <div class="w-full max-w-5xl mx-auto">
+                <div class="w-full">
+                        <h3 class="font-['Roboto'] font-medium text-base md:text-lg lg:text-xl xl:text-2xl capitalize">Manage Account</h3>
                 </div>
-                <div class="w-full flex flex-col gap-3 md:gap-4 lg:gap-5  mt-4 md:mt-5 lg:mt-7 xl:mt-9">
-                    <div>
-                        <h4 class="font-['Roboto'] font-medium text-base md:text-lg lg:text-xl xl:text-[22px]">Measurement</h4>
-                    </div>
-                    <form action="#">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-3 md:gap-y-4 lg:gap-y-5 xl:gap-y-6 gap-x-4 md:gap-x-5 lg:gap-x-6 xl:gap-x-7">
-                            <label for="Shoulder" class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#EAE0D6] flex items-center justify-between font-['Jost'] font-medium text-[#5D5D5D]  "><span class="text-sm md:text-base lg:text-lg text-nowrap">Shoulder</span> <input type="number" class="appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 text-right w-full outline-none px-2" id="Shoulder" ><span class="text-xs md:text-sm lg:text-base">inch</span></label>
-                            <label for="Bust" class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#EAE0D6] flex items-center justify-between font-['Jost'] font-medium text-[#5D5D5D]  "><span class="text-sm md:text-base lg:text-lg text-nowrap">Bust</span> <input type="number" class="appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 text-right w-full outline-none px-2" id="Bust" ><span class="text-xs md:text-sm lg:text-base">inch</span></label>
-                            <label for="Under-bust" class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#EAE0D6] flex items-center justify-between font-['Jost'] font-medium text-[#5D5D5D]  "><span class="text-sm md:text-base lg:text-lg text-nowrap">Under bust</span> <input type="number" class="appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 text-right w-full outline-none px-2" id="Under-bust" ><span class="text-xs md:text-sm lg:text-base">inch</span></label>
-                            <label for="Waist" class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#EAE0D6] flex items-center justify-between font-['Jost'] font-medium text-[#5D5D5D]  "><span class="text-sm md:text-base lg:text-lg text-nowrap">Waist</span> <input type="number" class="appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 text-right w-full outline-none px-2" id="Waist" ><span class="text-xs md:text-sm lg:text-base">inch</span></label>
-                            <label for="Sleeve-Length" class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#EAE0D6] flex items-center justify-between font-['Jost'] font-medium text-[#5D5D5D]  "><span class="text-sm md:text-base lg:text-lg text-nowrap">Sleeve Length</span> <input type="number" class="appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 text-right w-full outline-none px-2" id="Sleeve-Length" ><span class="text-xs md:text-sm lg:text-base">inch</span></label>
-                            <label for="Armhole" class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#EAE0D6] flex items-center justify-between font-['Jost'] font-medium text-[#5D5D5D]  "><span class="text-sm md:text-base lg:text-lg text-nowrap">Armhole</span> <input type="number" class="appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 text-right w-full outline-none px-2" id="Armhole" ><span class="text-xs md:text-sm lg:text-base">inch</span></label>
-                            <label for="Blouse-Length" class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#EAE0D6] flex items-center justify-between font-['Jost'] font-medium text-[#5D5D5D]  "><span class="text-sm md:text-base lg:text-lg text-nowrap">Blouse Length</span> <input type="number" class="appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 text-right w-full outline-none px-2" id="Blouse-Length" ><span class="text-xs md:text-sm lg:text-base">inch</span></label>
-                            <label for="Neck-Front-Depth" class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#EAE0D6] flex items-center justify-between font-['Jost'] font-medium text-[#5D5D5D]  "><span class="text-sm md:text-base lg:text-lg text-nowrap">Neck Front Depth</span> <input type="number" class="appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 text-right w-full outline-none px-2" id="Neck-Front-Depth" ><span class="text-xs md:text-sm lg:text-base">inch</span></label>
-                            <button class="w-full cursor-pointer py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-2xl border-2 border-[#CCCCCC] bg-[#333331] flex items-center justify-center text-[#EAE0D6] font-['Jost'] font-medium  text-sm md:text-base lg:text-lg text-nowrap">+Add More Fields</button>
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 items-start gap-6 md:gap-8 lg:gap-10 xl:gap-12 mt-3.5 md:mt-4 lg:mt-5 xl:mt-6">
+                    <div class="bg-white flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-7 p-5 sm:p-6 md:p-7 lg:p-8 xl:p-9 rounded-2xl md:rounded-3xl">
+                        <div class="flex justify-between items-center gap-3 md:3.5 lg:gap-4 xl:gap-5">
+                            <div>
+                                <h3 class="font-['Roboto'] font-medium text-[#FF383C] text-xs md:text-sm lg:text-base xl:text-lg">My Profile</h3>
+                                <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-base">Manage your profile information</span>
+                            </div>
+                            <div class="min-w-max">
+                                <button class="cursor-pointer">
+                                    <img class="size-4 md:size-5 lg:size-6 object-contain" src="./assets/icons/Account.png" alt="">
+                                </button>
+                            </div>
                         </div>
-                        <div class="w-full flex justify-center">
-                            <button class="cursor-pointer bg-[#333331] font-['Roboto'] font-medium text-base md:text-lg lg:text-xl xl:text-[22px] text-white w-full max-w-lg border mt-12  py-3 md:py-3.5 lg:py-4 xl:py-5 px-2 md:px-2.5 lg:px-3 xl:px-3.5 rounded-full">Submit</button>
+                        <div class="border border-[#EFEFEF]"></div>
+                        <div class="flex justify-between items-center gap-3 md:3.5 lg:gap-4 xl:gap-5">
+                            <div>
+                                <h3 class="font-['Roboto'] font-medium text-[#404040] text-xs md:text-sm lg:text-base xl:text-lg">Delete Account</h3>
+                                <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-base">Your account will no longer be accessible to use on any device</span>
+                            </div>
+                            <div class="min-w-max">
+                                <button class="cursor-pointer">
+                                    <img class="size-4 md:size-5 lg:size-6 object-contain" src="./assets/icons/Wishlist.png" alt="">
+                                </button>
+                            </div>
                         </div>
-                    </form>
-                </div>
-                <div class="mt-9">
-                    <div>
-                        <h4 class="font-['Roboto'] font-medium text-base md:text-lg lg:text-xl xl:text-[22px]">How To Measure?</h4>
                     </div>
-                    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-16 mt-9">
-                        <div class="relative">
-                            <button class="absolute inset-0 flex items-center justify-center cursor-pointer z-20"><img class="size-16 md:size-20 lg:size-24 xl:size-32 object-contain" src="./assets/icons/play-button.png" alt=""></button>
-                            <video class="z-10" poster="./assets/images/how-to-measure.png">
-                                <source/>
-                            </video>
+                    <div class="flex flex-col gap-3 md:gap-3.5 lg:gap-4 xl:gap-5">
+                        <div class="w-full flex justify-between items-center gap-3 md:3.5 lg:gap-4 xl:gap-5 bg-white rounded-xl lg:rounded-2xl py-2.5 md:py-3 lg:py-3.5 xl:py-4 px-3 md:px-3.5 lg:px-4 xl:px-5">
+                            <div>
+                                <h5 class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base">Full Name</h5>
+                                <span class="font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base xl:text-lg">Vasu Pratap Chauhan</span>
+                            </div>
+                            <div class="min-w-max">
+                                <button class="cursor-pointer">
+                                    <img class="size-4 md:size-5 lg:size-6 object-contain" src="./assets/icons/pencil 1.png" alt="">
+                                </button>
+                            </div>
                         </div>
-                        <img src="./assets/images/how-to-measure.png" alt="">
-                    </div>
+                        <div class="w-full flex justify-between items-center bg-white rounded-xl lg:rounded-2xl py-2.5 md:py-3 lg:py-3.5 xl:py-4 px-3 md:px-3.5 lg:px-4 xl:px-5">
+                            <div>
+                                <h5 class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base">Phone Number</h5>
+                                <span class="font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base xl:text-lg">9876543212</span>
+                            </div>
+                            <div>
+                                <button class="cursor-pointer">
+                                    <span class="font-['Roboto'] font-semibold text-[] text-xs md:text-sm lg:text-base xl:text-lg">Update</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="w-full flex justify-between items-center bg-white rounded-xl lg:rounded-2xl py-2.5 md:py-3 lg:py-3.5 xl:py-4 px-3 md:px-3.5 lg:px-4 xl:px-5">
+                            <div>
+                                <h5 class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base">Email Address</h5>
+                                <span class="font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base xl:text-lg">vasupratapchauhan@gmail.com</span>    
+                            </div>
+                            <div>
+                                <button class="cursor-pointer">
+                                    <span class="font-['Roboto'] font-semibold text-[] text-xs md:text-sm lg:text-base xl:text-lg">Verify</span>
+                                </button>
+                            </div>
+                        </div>
+                   </div>
                 </div>
             </div>
         </div>
     </section>
 
-   
+    <!-- ================= Delete Account ================== -->
+    <section class="w-full h-full fixed inset-0 bg-black/40 flex items-center px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40"">
+        <div style="scrollbar-width: none;" class="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto overflow-y-auto max-h-[430px] md:max-h-[480px] lg:max-h-[545px] xl:max-h-[640px] mx-auto flex flex-col bg-[#ECE6DF] rounded-xl md:rounded-2xl lg:rounded-3xl xl:rounded-4xl p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                <form class="w-full h-full flex flex-col justify-between gap-5">
+                    <div class="flex flex-col justify-between gap-y-5 xl:gap-y-8">
+                        <div class="relative flex flex-col gap-3 md:gap-3.5 lg:gap-4 xl:gap-5 ">
+                            <div class="w-full flex justify-between">
+                                <h3 class="font-['Roboto'] font-bold text-2xl lg:text-3xl xl:text-4xl">Delete Account</h3>
+                                <button class="cursor-pointer ml-auto">
+                                    <i class="fa-solid fa-xmark text-xl lg:text-2xl"></i>
+                                </button>
+                            </div>
+                            <p class="font-['Roboto'] font-normal text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#333331] mb-2">
+                                Deleting your account means saying goodbye to your data and experiences with us. Once removed, you won’t be able to get them back.
+                            </p>
+                            <div>
+                                <h3 class="font-['Roboto'] font-semibold text-sm md:text-base lg:text-lg xl:text-xl">What will be deleted:</h3>
+                            </div>
+                        </div>
+
+                        <div class="w-full flex flex-col justify-center gap-3 md:gap-3.5 lg:gap-4 xl:gap-5">
+                           <div class="flex items-start gap-2 lg:gap-3">
+                                <div class="rounded-full min-w-max relative size-10 md:size-12 lg:size-14 xl:size-16 flex justify-center items-center">
+                                    <img class="size-4 md:size-5 lg:size-6 xl:size-8 absolute object-cover z-10 object-center" src="./assets/icons/user 1.png" alt="">
+                                    <img src="./assets/icons/Ellipse 16.png" class="object-contain size-full absolute" alt="">
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="font-['Roboto'] font-semibold text-sm mad:text-base lg:text-lg">Profile & Personal Details</h3>
+                                    <span class="font-['Roboto'] font-normal text-xs md:text-sm lg:text-base xl:text-lg text-[#6E6E6E]">Your account information and saved preferences.</span>
+                                </div>
+                           </div>
+                           <div class="flex items-start gap-2 lg:gap-3">
+                                <div class="rounded-full min-w-max relative size-10 md:size-12 lg:size-14 xl:size-16 flex justify-center items-center">
+                                    <img class="size-4 md:size-5 lg:size-6 xl:size-8 absolute object-cover z-10 object-center" src="./assets/icons/order-history 1.png" alt="">
+                                    <img src="./assets/icons/Ellipse 16.png" class="object-contain size-full absolute" alt="">
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="font-['Roboto'] font-semibold text-sm mad:text-base lg:text-lg">Profile & Personal Details</h3>
+                                    <span class="font-['Roboto'] font-normal text-xs md:text-sm lg:text-base xl:text-lg text-[#6E6E6E]">Your account information and saved preferences.</span>
+                                </div>
+                           </div>
+                           <div class="flex items-start gap-2 lg:gap-3">
+                                <div class="rounded-full min-w-max relative size-10 md:size-12 lg:size-14 xl:size-16 flex justify-center items-center">
+                                    <img class="size-4 md:size-5 lg:size-6 xl:size-8 absolute object-cover z-10 object-center" src="./assets/icons/access-control 1.png" alt="">
+                                    <img src="./assets/icons/Ellipse 16.png" class="object-contain size-full absolute" alt="">
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="font-['Roboto'] font-semibold text-sm mad:text-base lg:text-lg">Profile & Personal Details</h3>
+                                    <span class="font-['Roboto'] font-normal text-xs md:text-sm lg:text-base xl:text-lg text-[#6E6E6E]">Your account information and saved preferences.</span>
+                                </div>
+                           </div>
+                        </div>
+                        
+                        <div class="mt-2.5 sm:mt-3 md:mt-3.5 lg:mt-4 xl:mt-5">                        
+                            <button class="w-full text-center py-2.5 md:py-3 lg:py-3.5 xl:py-4  bg-[#333331] cursor-pointer rounded-full text-white font-semibold text-xs md:text-sm lg:text-base xl:text-lg">
+                                Delete Account
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </section>
 
     <!-- ================= Footer ================== -->
     <footer class="mt-20 bg-[#EAE0D6]">
@@ -218,6 +301,7 @@
 
     <!-- ================= Scripts ================== -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <script>
         // ==================== font seoul-namsan ===============
         (function (d) {

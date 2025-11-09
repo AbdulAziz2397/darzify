@@ -27,7 +27,7 @@
     <title>Darzify</title>
 </head>
 
-<body class="bg-[#ECE6DF]">
+<body class="bg-[#ECE6DF] overflow-hidden">
     <!--======================== Header =======================-->
     <header class="bg-[#333331]">
         <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
@@ -61,137 +61,122 @@
         </div>
     </header>
 
-    <!-- ================= All orders ================== -->
+    <!-- ================= Manage Account ================== -->
 
     <section class="mt-5 md:mt-7 lg:mt-9 xl:mt-12 mb-52 sm:mb-56 md:mb-60 lg:mb-64 xl:mb-72 2xl:mb-80">
         <div class="mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
-            <div class="w-full max-w-4xl mx-auto">
-                <div class="flex justify-between items-center mb-12">
-                    <div><h3 class="font-['Roboto'] text-nowrap font-medium text-base md:text-lg lg:text-xl xl:text-2xl">All Orders</h3></div>
-                    <div class="flex w-full justify-end gap-2.5 md:gap-4">
-                        <label for="search-order" class="border cursor-text border-[#6E6E6E] h-10 md:h-12 px-2.5 md:px-3.5 w-auto md:max-w-sm xl:max-w-md flex items-center gap-3 rounded-xl font-['Roboto'] font-normal text-sm md:text-base lg:text-lg xl:text-xl">
-                            <img src="./assets/icons/magnifying-glass-dark.png" class="size-4 lg:size-5 object-contain" alt="">
-                            <input class="w-full outline-none hidden md:block" id="search-order" placeholder="Search in orders" type="text">
-                        </label>
-                        <button class="border cursor-pointer border-[#6E6E6E] flex justify-center items-center w-auto md:w-40 lg:w-44 xl:w-48 h-10 md:h-12 p-2.5 md:p-3.5 gap-3.5 rounded-xl">
-                            <img src="./assets/icons/filters-icon.png" class="size-5 lg:size-6 object-contain" alt="">
-                            <span class="font-['Roboto'] font-medium text-sm md:text-base lg:text-lg xl:text-xl hidden md:block" >Filters</span>
-                        </button>
-                    </div>
+            <div class="w-full max-w-5xl mx-auto">
+                <div class="w-full">
+                        <h3 class="font-['Roboto'] font-medium text-base md:text-lg lg:text-xl xl:text-2xl capitalize">Manage Account</h3>
                 </div>
-                <div class="flex flex-col gap-12">
-                    <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl lg:rounded-2xl flex flex-col gap-5">
-                        <div class="flex gap-2 sm:gap-3.5">
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 items-start gap-6 md:gap-8 lg:gap-10 xl:gap-12 mt-3.5 md:mt-4 lg:mt-5 xl:mt-6">
+                    <div class="bg-white flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-7 p-5 sm:p-6 md:p-7 lg:p-8 xl:p-9 rounded-2xl md:rounded-3xl">
+                        <div class="flex justify-between items-center gap-3 md:3.5 lg:gap-4 xl:gap-5">
                             <div>
-                                <img class="size-20 sm:size-24 md:size-28 object-cover object-top rounded-xl" src="./assets/images/ordered-product.png" alt="">
+                                <h3 class="font-['Roboto'] font-medium text-[#FF383C] text-xs md:text-sm lg:text-base xl:text-lg">My Profile</h3>
+                                <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-base">Manage your profile information</span>
                             </div>
-                            <div class="flex flex-col">
-                                <h4 class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Black Oversized Shirt</h4>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Black Oversized Shirt</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Size: M</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Tailor: PILGRIM GREY</span>
-                            </div>
-                            <div class="flex items-center ml-auto">
-                                <button class=" text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl cursor-pointer">
-                                    <i class="fa-solid fa-chevron-right"></i>
+                            <div class="min-w-max">
+                                <button class="cursor-pointer">
+                                    <img class="size-4 md:size-5 lg:size-6 object-contain" src="./assets/icons/Account.png" alt="">
                                 </button>
                             </div>
                         </div>
-                        <div class="border border-[#EEECEB] w-full"> <!-- seprater line --> </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col gap-2.5">
-                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-1 px-4 bg-[#E7E4CA] rounded-full uppercase max-w-min">STITCHING</label>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Ordered On Fri, 1 Aug</span>
-                            </div>
-                             <div class="flex flex-nowrap items-center gap-1">
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-4 md:px-6 border text-[#333331] border-[#333331] cursor-pointer">Track</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl lg:rounded-2xl flex flex-col gap-5">
-                        <div class="flex gap-2 sm:gap-3.5">
+                        <div class="border border-[#EFEFEF]"></div>
+                        <div class="flex justify-between items-center gap-3 md:3.5 lg:gap-4 xl:gap-5">
                             <div>
-                                <img class="size-20 sm:size-24 md:size-28 object-cover object-top rounded-xl" src="./assets/images/ordered-product.png" alt="">
+                                <h3 class="font-['Roboto'] font-medium text-[#404040] text-xs md:text-sm lg:text-base xl:text-lg">Delete Account</h3>
+                                <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-base">Your account will no longer be accessible to use on any device</span>
                             </div>
-                            <div class="flex flex-col">
-                                <h4 class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Black Oversized Shirt</h4>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Black Oversized Shirt</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Size: M</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Tailor: PILGRIM GREY</span>
-                            </div>
-                            <div class="flex items-center ml-auto">
-                                <button class=" text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl cursor-pointer">
-                                    <i class="fa-solid fa-chevron-right"></i>
+                            <div class="min-w-max">
+                                <button class="cursor-pointer">
+                                    <img class="size-4 md:size-5 lg:size-6 object-contain" src="./assets/icons/Wishlist.png" alt="">
                                 </button>
                             </div>
                         </div>
-                        <div class="border border-[#EEECEB] w-full"> <!-- seprater line --> </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col gap-2.5">
-                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-1 px-4 bg-[#D4D8EA] rounded-full uppercase max-w-min">Ordered</label>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Ordered On Fri, 1 Aug</span>
-                            </div>
-                            <div class="flex flex-nowrap items-center gap-1">
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-4 md:px-6 border text-[#333331] border-[#333331] cursor-pointer">Track</button>
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-4 md:px-6 border text-[#6E6E6E] border-[#333331] cursor-pointer">Cancel</button>
-                            </div>
-                        </div>
                     </div>
-                    <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl lg:rounded-2xl flex flex-col gap-5">
-                        <div class="flex gap-2 sm:gap-3.5">
+                    <div class="flex flex-col gap-3 md:gap-3.5 lg:gap-4 xl:gap-5">
+                        <div class="w-full flex justify-between items-center gap-3 md:3.5 lg:gap-4 xl:gap-5 bg-white rounded-xl lg:rounded-2xl py-2.5 md:py-3 lg:py-3.5 xl:py-4 px-3 md:px-3.5 lg:px-4 xl:px-5">
                             <div>
-                                <img class="size-20 sm:size-24 md:size-28 object-cover object-top rounded-xl" src="./assets/images/ordered-product.png" alt="">
+                                <h5 class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base">Full Name</h5>
+                                <span class="font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base xl:text-lg">Vasu Pratap Chauhan</span>
                             </div>
-                            <div class="flex flex-col">
-                                <h4 class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Black Oversized Shirt</h4>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Black Oversized Shirt</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Size: M</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Tailor: PILGRIM GREY</span>
-                            </div>
-                            <div class="flex items-center ml-auto">
-                                <button class=" text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl cursor-pointer">
-                                    <i class="fa-solid fa-chevron-right"></i>
+                            <div class="min-w-max">
+                                <button class="cursor-pointer">
+                                    <img class="size-4 md:size-5 lg:size-6 object-contain" src="./assets/icons/pencil 1.png" alt="">
                                 </button>
                             </div>
                         </div>
-                        <div class="border border-[#EEECEB] w-full"> <!-- seprater line --> </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col gap-2.5">
-                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-1 px-4 bg-[#ECE5DF] rounded-full uppercase max-w-min">Delevered</label>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Ordered On Fri, 1 Aug</span>
-                            </div>
-                             <div class="flex flex-nowrap items-center gap-1">
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-4 md:px-6 border text-[#333331] border-[#333331] cursor-pointer">Retern/Exchange</button>
-                            </div>
-                        </div>
-                        <div class="border border-[#EEECEB] w-full"> <!-- seprater line --> </div>
-                        <div class="mb-2 md:mb-3 lg:mb-4 xl:mb-5 flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
+                        <div class="w-full flex justify-between items-center bg-white rounded-xl lg:rounded-2xl py-2.5 md:py-3 lg:py-3.5 xl:py-4 px-3 md:px-3.5 lg:px-4 xl:px-5">
+                            <div>
+                                <h5 class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base">Phone Number</h5>
+                                <span class="font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base xl:text-lg">9876543212</span>
                             </div>
                             <div>
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-6 text-[#333331] border-[#333331] cursor-pointer">Review</button>
+                                <button class="cursor-pointer">
+                                    <span class="font-['Roboto'] font-semibold text-[] text-xs md:text-sm lg:text-base xl:text-lg">Update</span>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="mt-3.5 md:mt-5 lg:mt-7 xl:mt-9 flex justify-between">
-                    <div>
-                        <span class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#6E6E6E]">Showing 1-10 out of 20</span>
-                    </div>
-                    <div>
-                        <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl  text-[#333331] cursor-pointer">Next ></button>
-                    </div>
+                        <div class="w-full flex justify-between items-center bg-white rounded-xl lg:rounded-2xl py-2.5 md:py-3 lg:py-3.5 xl:py-4 px-3 md:px-3.5 lg:px-4 xl:px-5">
+                            <div>
+                                <h5 class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base">Email Address</h5>
+                                <span class="font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base xl:text-lg">vasupratapchauhan@gmail.com</span>    
+                            </div>
+                            <div>
+                                <button class="cursor-pointer">
+                                    <span class="font-['Roboto'] font-semibold text-[] text-xs md:text-sm lg:text-base xl:text-lg">Verify</span>
+                                </button>
+                            </div>
+                        </div>
+                   </div>
                 </div>
             </div>
         </div>
     </section>
 
-   
+    <!-- ================= OTP verification form ================== -->
+    <section class="w-screen h-screen fixed inset-0 bg-black/40 flex items-center px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40"">
+        <div class="w-full max-w-md md:max-w-lg lg:max-w-xl h-full max-h-[350px] md:max-h-[400px] lg:max-h-[500px] xl:max-h-[600px] mx-auto flex flex-col bg-[#ECE6DF] rounded-xl md:rounded-2xl lg:rounded-3xl xl:rounded-4xl p-5 sm:p-7 md:py-10">
+                <form class="w-full h-full flex flex-col justify-between gap-5">
+                    <div class="flex flex-col gap-y-5 xl:gap-y-8">
+                        <div class="relative  flex flex-col gap-1 md:gap-1.5 lg:gap-2.5 xl:gap-3">
+                            <div class="w-full flex">
+                                <button class="cursor-pointer ml-auto">
+                                    <i class="fa-solid fa-xmark text-xl lg:text-2xl"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-['Roboto'] font-bold text-2xl lg:text-3xl xl:text-4xl mb-2">OTP Varification</h3>
+                            <p class="font-['Roboto'] font-normal text-xs md:text-sm lg:text-base xl:text-lg text-[#5D5D5D] mb-2">
+                                6 digit OTP has been sent to your mobile number
+                            </p>
+                            <div>
+                                <span class="font-['Jost'] font-medium text-sm md:text-base lg:text-lg xl:text-xl">+91 9876543121</span> <img src="./assets/icons/compose.png" class="inline size-4 sm:size-4.5 md:size-5 lg:size-5.5 xl:size-6 cursor-pointer" alt="">
+                            </div>
+                        </div>
+
+                        <div class="w-full flex flex-col justify-center">
+                            <div id="otp-input" class="w-full flex justify-between">
+                                <input class="font-['Jost'] font-medium text-base border-2 rounded-md md:rounded-lg lg:rounded-xl border-[#C4C4C4] bg-[#ECE6DF] size-8 sm:size-9 md:size-10 lg:size-12 xl:size-15" type="number" step="1" min="0" max="9" autocomplete="no" placeholder="--" pattern="\d*">
+                                <input class="font-['Jost'] font-medium text-base border-2 rounded-md md:rounded-lg lg:rounded-xl border-[#C4C4C4] bg-[#ECE6DF] size-8 sm:size-9 md:size-10 lg:size-12 xl:size-15" type="number" step="1" min="0" max="9" autocomplete="no" placeholder="--" pattern="\d*">
+                                <input class="font-['Jost'] font-medium text-base border-2 rounded-md md:rounded-lg lg:rounded-xl border-[#C4C4C4] bg-[#ECE6DF] size-8 sm:size-9 md:size-10 lg:size-12 xl:size-15" type="number" step="1" min="0" max="9" autocomplete="no" placeholder="--" pattern="\d*">
+                                <input class="font-['Jost'] font-medium text-base border-2 rounded-md md:rounded-lg lg:rounded-xl border-[#C4C4C4] bg-[#ECE6DF] size-8 sm:size-9 md:size-10 lg:size-12 xl:size-15" type="number" step="1" min="0" max="9" autocomplete="no" placeholder="--" pattern="\d*">
+                                <input class="font-['Jost'] font-medium text-base border-2 rounded-md md:rounded-lg lg:rounded-xl border-[#C4C4C4] bg-[#ECE6DF] size-8 sm:size-9 md:size-10 lg:size-12 xl:size-15" type="number" step="1" min="0" max="9" autocomplete="no" placeholder="--" pattern="\d*">
+                                <input class="font-['Jost'] font-medium text-base border-2 rounded-md md:rounded-lg lg:rounded-xl border-[#C4C4C4] bg-[#ECE6DF] size-8 sm:size-9 md:size-10 lg:size-12 xl:size-15" type="number" step="1" min="0" max="9" autocomplete="no" placeholder="--" pattern="\d*">
+                            </div>
+                            <input type="hidden" name="otp">
+                        </div>
+                    </div>
+
+                    <div>                        
+                        <button class="mt-2.5 sm:mt-3 md:mt-3.5 lg:mt-4 xl:mt-5 w-full text-center py-2.5 md:py-3 lg:py-3.5 xl:py-4  bg-[#333331] cursor-pointer rounded-full text-white font-semibold text-xs md:text-sm lg:text-base xl:text-lg">
+                            Verify OTP
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+    </section>
 
     <!-- ================= Footer ================== -->
     <footer class="mt-20 bg-[#EAE0D6]">
@@ -296,6 +281,110 @@
 
     <!-- ================= Scripts ================== -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+     <!-- OTP Verfication js code -->
+    <script>
+        (function () {
+            const inputs = document.querySelectorAll("#otp-input input");
+
+            for (let i = 0; i < inputs.length; i++) {
+                const input = inputs[i];
+
+                input.addEventListener("input", function () {
+                // handling normal input
+                if (input.value.length == 1 && i+1 < inputs.length) {
+                    inputs[i+1].focus();
+                }
+
+                // if a value is pasted, put each character to each of the next input
+                if (input.value.length > 1) {
+                    // sanitise input
+                    if (isNaN(input.value)) {
+                    input.value = "";
+                    updateInput();
+                    return;
+                    }
+
+                    // split characters to array
+                    const chars = input.value.split('');
+
+                    for (let pos = 0; pos < chars.length; pos++) {
+                    // if length exceeded the number of inputs, stop
+                    if (pos + i >= inputs.length) break;
+
+                    // paste value
+                    let targetInput = inputs[pos + i];
+                    targetInput.value = chars[pos];
+                    }
+
+                    // focus the input next to the last pasted character
+                    let focus_index = Math.min(inputs.length - 1, i + chars.length);
+                    inputs[focus_index].focus();
+                }
+                updateInput();
+                });
+
+                input.addEventListener("keydown", function (e) {
+                // backspace button
+                if (e.keyCode == 8 && input.value == '' && i != 0) {
+                    // shift next values towards the left
+                    for (let pos = i; pos < inputs.length - 1; pos++) {
+                    inputs[pos].value = inputs[pos + 1].value;
+                    }
+
+                    // clear previous box and focus on it
+                    inputs[i-1].value = '';
+                    inputs[i-1].focus();
+                    updateInput();
+                    return;
+                }
+
+                // delete button
+                if (e.keyCode == 46 && i != inputs.length - 1) {
+                    // shift next values towards the left
+                    for (let pos = i; pos < inputs.length - 1; pos++) {
+                    inputs[pos].value = inputs[pos + 1].value;
+                    }
+
+                    // clear the last box
+                    inputs[inputs.length - 1].value = '';
+                    input.select();
+                    e.preventDefault();
+                    updateInput();
+                    return;
+                }
+
+                // left button
+                if (e.keyCode == 37) {
+                    if (i > 0) {
+                    e.preventDefault();
+                    inputs[i-1].focus();
+                    inputs[i-1].select();
+                    }
+                    return;
+                }
+
+                // right button
+                if (e.keyCode == 39) {
+                    if (i+1 < inputs.length) {
+                    e.preventDefault();
+                    inputs[i+1].focus();
+                    inputs[i+1].select();
+                    }
+                    return;
+                }
+                });
+            }
+            
+            function updateInput() {
+                let inputValue = Array.from(inputs).reduce(function (otp, input) {
+                otp += (input.value.length) ? input.value : ' ';
+                return otp;
+                }, "");
+                document.querySelector("input[name=otp]").value = inputValue;
+            }
+        })();
+    </script>
+
     <script>
         // ==================== font seoul-namsan ===============
         (function (d) {
