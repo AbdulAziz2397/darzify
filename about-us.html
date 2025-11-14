@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file -->
+    <link href="./tailwind.css" rel="stylesheet">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Jost and Roboto Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Title -->
+    <title>Darzify</title>
+</head>
+
+<body class="bg-[#ECE6DF]">
+    <!--======================== Header =======================-->
+    <header class="bg-[#333331]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="h-16 md:h-18 xl:h-20 2xl:h-24 flex justify-between items-center">
+                <div class=" flex justify-start items-center gap-2.5">
+                    <div>
+                        <span class="uppercase text-[22px] md:text-2xl lg:text-[28px] xl:text-[32px] 2xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
+                    </div>
+                    <div class="flex items-center text-[#EAE0D6] gap-1 md:gap-1.5">
+                        <img src="./assets/icons/location-pin.png" class="size-4 md:size-4.5 lg:size-4 xl:size-5 2xl:size-6"
+                            alt="location-pin">
+                        <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium font-['Jost'] hidden md:block ">Gaur City 2, Noida</span>
+                            <button class="cursor-pointer">
+                                <i class="fa-solid fa-chevron-down text-xs lg:text-sm xl:text-base"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="w-auto lg:w-1/2 flex items-center justify-end gap-2 sm:gap-3 md:gap-4">
+                    <div class="cursor-pointer lg:cursor-text lg:w-full lg:max-w-80 xl:max-w-96 size-6 md:size-8 lg:h-10  xl:h-12 2xl:h-14 flex items-center justify-center border border-[#EAE0D6] rounded-md md:rounded-lg lg:rounded-xl ">
+                        <img src="./assets/icons/magnifying-glass.png" class="size-3 md:size-4 lg:m-3" alt="magnifying-glass" />
+                        <input type="text" placeholder="Search for ‘boutiques’" class="text-xl placeholder:text-[#6E6E6E] text-[#EAE0D6] font-['Roboto'] h-full w-full outline-none border-none hidden lg:block">
+                    </div>
+                    <button class="text-[#333331] bg-[#ECE6DF] cursor-pointer size-6 md:size-8 lg:size-10 xl:size-12 2xl:size-14 rounded-md md:rounded-lg lg:rounded-xl flex justify-center items-center">
+                        <i class="fa-regular fa-user text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"></i>
+                    </button>
+                    <button class="bg-[#333331] cursor-pointer size-8 md:size-10 lg:size-12 xl:size-14 flex justify-center items-center">
+                        <img src="./assets/icons/shopping-bag.png" class="size-5 md:size-6 lg:size-7 xl:size-6 2xl:size-8 object-contain" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= About Us ================== -->
+    <section class="mt-5 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="mb-4 md:mb-5 xl:mb-6"><h3 class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-medium text-black">Others</h3></div>
+            <div class="flex justify-center items-start flex-col md:flex-row gap-5 md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12">
+                <div class="w-full md:max-w-md min-w-full md:min-w-2xs lg:min-w-xs xl:min-w-sm 2xl:min-w-md bg-white p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-9 rounded-xl md:rounded-2xl xl:rounded-3xl text-xs md:text-sm xl:text-base">
+                    <button id="about_us_btn" class="about_us_btn font-medium text-xs md:text-sm xl:text-base flex items-center transition-all duration-300 w-full gap-3 md:gap-4 xl:gap-5 cursor-pointer area-selected:text-[#FF383C] focus:text-[#FF383C] hover:text-[#FF383C] text-[#FF383C]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4 md:size-5 xl:size-6 overflow-visible" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 24C14.3734 24 16.6935 23.2962 18.6668 21.9776C20.6402 20.6591 22.1783 18.7849 23.0866 16.5922C23.9948 14.3995 24.2324 11.9867 23.7694 9.65892C23.3064 7.33115 22.1635 5.19295 20.4853 3.51472C18.8071 1.83649 16.6689 0.693605 14.3411 0.230582C12.0133 -0.232441 9.60051 0.00519943 7.4078 0.913451C5.21509 1.8217 3.34094 3.35977 2.02236 5.33316C0.703788 7.30655 0 9.62663 0 12C0.00344108 15.1815 1.26883 18.2318 3.51852 20.4815C5.76821 22.7312 8.81846 23.9966 12 24ZM12 5.00001C12.2967 5.00001 12.5867 5.08798 12.8334 5.2528C13.08 5.41762 13.2723 5.65189 13.3858 5.92598C13.4994 6.20007 13.5291 6.50167 13.4712 6.79264C13.4133 7.08361 13.2704 7.35089 13.0607 7.56067C12.8509 7.77044 12.5836 7.91331 12.2926 7.97118C12.0017 8.02906 11.7001 7.99936 11.426 7.88582C11.1519 7.77229 10.9176 7.58003 10.7528 7.33336C10.588 7.08669 10.5 6.79668 10.5 6.50001C10.5 6.10218 10.658 5.72065 10.9393 5.43934C11.2206 5.15804 11.6022 5.00001 12 5.00001ZM11 10H12C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12V18C14 18.2652 13.8946 18.5196 13.7071 18.7071C13.5196 18.8946 13.2652 19 13 19C12.7348 19 12.4804 18.8946 12.2929 18.7071C12.1054 18.5196 12 18.2652 12 18V12H11C10.7348 12 10.4804 11.8946 10.2929 11.7071C10.1054 11.5196 10 11.2652 10 11C10 10.7348 10.1054 10.4804 10.2929 10.2929C10.4804 10.1054 10.7348 10 11 10Z" fill="currentColor"/>
+                        </svg>
+                        <span>About us</span>
+                        <i class="fa-solid fa-chevron-right ml-auto"></i>
+                    </button>
+                    <div class="border border-[#E2DCD7] w-full my-3 md:my-3.5 lg:my-4 xl:my-5 2xl:my-6"> <!-- seprater line --> </div>
+                    <button id="term_of_use_btn" class="about_us_btn font-medium text-xs md:text-sm xl:text-base flex items-center transition-all duration-300 w-full gap-3 md:gap-4 xl:gap-5 cursor-pointer area-selected:text-[#FF383C] focus:text-[#FF383C] hover:text-[#FF383C] text-[#5D5D5D]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4 md:size-5 xl:size-6 overflow-visible" viewBox="0 0 24 24" fill="none">
+                            <path d="M16.162 24C15.21 24.002 14.317 23.616 13.663 22.922L11.272 20.387C10.893 19.985 10.912 19.352 11.314 18.973C11.716 18.594 12.349 18.613 12.728 19.015L15.119 21.55C15.647 22.133 16.63 22.148 17.175 21.58L22.282 16.304C22.667 15.908 23.3 15.898 23.696 16.282C24.093 16.666 24.103 17.299 23.719 17.696L18.6 22.984C17.939 23.645 17.079 24 16.162 24ZM11.93 24H5C2.243 24 0 21.757 0 19V5C0 2.243 2.243 0 5 0H13C15.757 0 18 2.243 18 5V17.852L16.166 19.747L14.184 17.644C13.634 17.061 12.89 16.726 12.089 16.703C11.277 16.675 10.526 16.969 9.943 17.519C9.36 18.069 9.026 18.812 9.003 19.614C8.98 20.415 9.269 21.177 9.819 21.76L11.932 24.001L11.93 24ZM4 6C4 6.552 4.448 7 5 7H13C13.553 7 14 6.552 14 6C14 5.448 13.553 5 13 5H5C4.448 5 4 5.448 4 6ZM4 11C4 11.552 4.448 12 5 12H13C13.553 12 14 11.552 14 11C14 10.448 13.553 10 13 10H5C4.448 10 4 10.448 4 11ZM5 17H8C8.552 17 9 16.552 9 16C9 15.448 8.552 15 8 15H5C4.448 15 4 15.448 4 16C4 16.552 4.448 17 5 17Z" fill="currentColor"/>
+                        </svg>
+                        <span>Terms of Use</span>
+                        <i class="fa-solid fa-chevron-right ml-auto"></i>
+                    </button>
+                    <div class="border border-[#E2DCD7] w-full my-3 md:my-3.5 lg:my-4 xl:my-5 2xl:my-6"> <!-- seprater line --> </div>
+                    <button id="privacy_policy_btn" class="font-medium text-xs md:text-sm xl:text-base flex items-center transition-all duration-300 w-full gap-3 md:gap-4 xl:gap-5 cursor-pointer area-selected:text-[#FF383C] focus:text-[#FF383C] hover:text-[#FF383C] text-[#5D5D5D]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4 md:size-5 xl:size-6 overflow-visible" viewBox="0 0 24 24" fill="none">
+                            <path d="M18.5 23.999C18.256 23.999 18.047 23.897 17.852 23.793C16.714 23.225 12.999 21.092 12.999 17.521V14.334C12.999 13.039 13.825 11.895 15.054 11.486L17.554 10.657C18.163 10.456 18.833 10.456 19.444 10.657L21.944 11.486C23.173 11.894 24 13.039 24 14.334V17.521C24 21.55 20.237 23.378 19.083 23.843C18.905 23.917 18.744 23.999 18.5 23.999ZM11.028 17.999H5.00001C4.44801 17.999 4.00001 17.552 4.00001 16.999C4.00001 16.446 4.44801 15.999 5.00001 15.999H10.999V14.334C10.999 14.22 11.018 14.111 11.026 13.999H5.00001C4.44801 13.999 4.00001 13.552 4.00001 12.999C4.00001 12.446 4.44801 11.999 5.00001 11.999H11.582C12.171 10.885 13.169 10.005 14.424 9.588L16.925 8.759C17.274 8.644 17.636 8.583 18 8.547V7C18.005 4.179 16 2 12.829 2C12.416 0.836 11.304 0 10 0H8.00001C6.69601 0 5.58401 0.836 5.17101 2C2.00001 1.999 -0.00499067 4.178 9.32998e-06 6.999V18.999C9.32998e-06 21.756 2.24301 23.999 5.00001 23.999H14.493C12.907 22.722 11.211 20.727 11.028 17.999ZM5.00001 7.999H13C13.552 7.999 14 8.446 14 8.999C14 9.552 13.552 9.999 13 9.999H5.00001C4.44801 9.999 4.00001 9.552 4.00001 8.999C4.00001 8.446 4.44801 7.999 5.00001 7.999Z" fill="currentColor"/>
+                        </svg>
+                        <span>Privacy Policy</span>
+                        <i class="fa-solid fa-chevron-right ml-auto"></i>
+                    </button>
+                    <div class="w-full flex justify-center mt-4 md:mt-5 xl:mt-6">
+                        <button class="text-[#5D5D5D] cursor-pointer font-medium font-['Roboto'] text-xs md:text-sm xl:text-base mx-auto">
+                            Logout
+                        </button>
+                    </div>
+                </div>
+                <div id="about_us"  style="display: block;">
+                    <div class="mb-4 md:mb-6 xl:mb-8"><img src="./assets/images/logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt=""></div>
+                    <div class="mb-4 md:mb-5 xl:mb-6"><h2 class="text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] font-['Jost'] font-bold text-black">About Us</h2></div>
+                    <div class="text-sm md:text-base lg:text-base xl:text-lg font-['Roboto'] font-normal text-[#5D5D5D] flex flex-col gap-2.5 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-8">
+                        <p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        </p>
+                        <p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        </p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <div id="term_of_use" style="display: none;">
+                    <div class="mb-4 md:mb-6 xl:mb-8"><img src="./assets/images/logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt=""></div>
+                    <div class="mb-4 md:mb-5 xl:mb-6"><h2 class="text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] font-['Jost'] font-bold text-black">Terms of Use</h2></div>
+                    <div class="text-sm md:text-base lg:text-base xl:text-lg font-['Roboto'] font-normal text-[#5D5D5D] flex flex-col gap-2.5 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-8">
+                        <p>
+                            Last Updated: 08 Sep, 2025
+                        </p>
+                        <p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        </p>
+                        <p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        </p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <div id="privacy_policy" style="display: none;">
+                    <div class="mb-4 md:mb-6 xl:mb-8"><img src="./assets/images/logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt=""></div>
+                    <div class="mb-4 md:mb-5 xl:mb-6"><h2 class="text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] font-['Jost'] font-bold text-black">Privacy Policy</h2></div>
+                    <div class="text-sm md:text-base lg:text-base xl:text-lg font-['Roboto'] font-normal text-[#5D5D5D] flex flex-col gap-2.5 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-8">
+                         <p>
+                            Last Updated: 08 Sep, 2025
+                        </p>
+                        <p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        </p>
+                        <p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        </p>
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                            Welcome to Darzify, your trusted career partner. By registering, creating a profile,
+                            or using our services, you agree to the Terms & Conditions outlined below.
+                            Please read them carefully before proceeding.
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
+
+    <!-- ================= Footer ================== -->
+    <footer class="mt-20 bg-[#EAE0D6]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex flex-wrap gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-5 justify-between pt-32 md:pt-40 lg:pt-48 xl:pt-56 pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+                <div class="max-w-sm flex gap-8 flex-col">
+                    <img src="./assets/images/footer-logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt="">
+                    <p class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+                    </p>
+                    <div class="flex items-baseline-last gap-6 ">
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Facebook.png" alt="Facebook"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Twitter.png" alt="Twitter"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Instagram.png" alt="Instagram"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/LinkedIn.png" alt="LinkedIn"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/YouTube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Product
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Features</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Pricing</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Case studies</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Reviews</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Updates</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Company
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">About</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Contact us</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Careers</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Culture</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Blog</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Support
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Getting started
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Help center
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Server status
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Report a bug
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Chat support
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Contact us</h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Email.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        contact@company.com
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Phone.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        (414) 687 - 5892
+                    </a>
+                    <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Mark.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        794 Mcallister St San Francisco, 94102
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 md:flex-row items-center  md:justify-between pb-2 md:pb-4 lg:pb-6 xl:pb-8">
+                <p class="font-['DM_Sans'] text-[#6F6C90] font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    Copyright © 2025 Darzify
+                </p>
+                <div class="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    <span class="font-['DM_Sans'] text-[#6F6C90] font-normal ">All Rights Reserved</span>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Terms and Conditions</a>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= Scripts ================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        // ==================== font seoul-namsan ===============
+        (function (d) {
+            var config = {
+                kitId: 'pug2vcj',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+
+        // ==================== Content Change On Click ===============
+        const aboutBtn = document.getElementById('about_us_btn');
+        const termBtn = document.getElementById('term_of_use_btn');
+        const privacyBtn = document.getElementById('privacy_policy_btn');
+            
+        const aboutSection = document.getElementById('about_us');
+        const termSection = document.getElementById('term_of_use');
+        const privacySection = document.getElementById('privacy_policy');
+            
+        function resetButtons() {
+          aboutBtn.classList.remove('text-[#FF383C]');
+          termBtn.classList.remove('text-[#FF383C]');
+          privacyBtn.classList.remove('text-[#FF383C]');
+        
+          aboutBtn.classList.add('text-[#5D5D5D]');
+          termBtn.classList.add('text-[#5D5D5D]');
+          privacyBtn.classList.add('text-[#5D5D5D]');
+        }
+        
+        termBtn.addEventListener('click', () => {
+          aboutSection.style.display = 'none';
+          termSection.style.display = 'block';
+          privacySection.style.display = 'none';
+        
+          resetButtons();
+          termBtn.classList.replace('text-[#5D5D5D]', 'text-[#FF383C]');
+        });
+        
+        privacyBtn.addEventListener('click', () => {
+          aboutSection.style.display = 'none';
+          termSection.style.display = 'none';
+          privacySection.style.display = 'block';
+        
+          resetButtons();
+          privacyBtn.classList.replace('text-[#5D5D5D]', 'text-[#FF383C]');
+        });
+        
+        aboutBtn.addEventListener('click', () => {
+          aboutSection.style.display = 'block';
+          termSection.style.display = 'none';
+          privacySection.style.display = 'none';
+        
+          resetButtons();
+          aboutBtn.classList.replace('text-[#5D5D5D]', 'text-[#FF383C]');
+        });
+
+
+    </script>
+
+</body>
+
+</html>

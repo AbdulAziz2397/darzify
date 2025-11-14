@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file -->
+    <link href="./tailwind.css" rel="stylesheet">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Jost and Roboto Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Title -->
+    <title>Darzify</title>
+</head>
+
+<body class="bg-[#ECE6DF]">
+    <!--======================== Header =======================-->
+    <header class="bg-[#333331]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="h-16 md:h-18 xl:h-20 2xl:h-24 flex justify-between items-center">
+                <div class=" flex justify-start items-center gap-2.5">
+                    <div>
+                        <span class="uppercase text-[22px] md:text-2xl lg:text-[28px] xl:text-[32px] 2xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
+                    </div>
+                    <div class="flex items-center text-[#EAE0D6] gap-1 md:gap-1.5">
+                        <img src="./assets/icons/location-pin.png" class="size-4 md:size-4.5 lg:size-4 xl:size-5 2xl:size-6"
+                            alt="location-pin">
+                        <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium font-['Jost'] hidden md:block ">Gaur City 2, Noida</span>
+                            <button class="cursor-pointer">
+                                <i class="fa-solid fa-chevron-down text-xs lg:text-sm xl:text-base"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="w-auto lg:w-1/2 flex items-center justify-end gap-2 sm:gap-3 md:gap-4">
+                    <div class="cursor-pointer lg:cursor-text lg:w-full lg:max-w-80 xl:max-w-96 size-6 md:size-8 lg:h-10  xl:h-12 2xl:h-14 flex items-center justify-center border border-[#EAE0D6] rounded-md md:rounded-lg lg:rounded-xl ">
+                        <img src="./assets/icons/magnifying-glass.png" class="size-3 md:size-4 lg:m-3" alt="magnifying-glass" />
+                        <input type="text" placeholder="Search for ‘boutiques’" class="text-xl placeholder:text-[#6E6E6E] text-[#EAE0D6] font-['Roboto'] h-full w-full outline-none border-none hidden lg:block">
+                    </div>
+                    <button class="text-[#333331] bg-[#ECE6DF] cursor-pointer size-6 md:size-8 lg:size-10 xl:size-12 2xl:size-14 rounded-md md:rounded-lg lg:rounded-xl flex justify-center items-center">
+                        <i class="fa-regular fa-user text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"></i>
+                    </button>
+                    <button class="bg-[#333331] cursor-pointer size-8 md:size-10 lg:size-12 xl:size-14 flex justify-center items-center">
+                        <img src="./assets/icons/shopping-bag.png" class="size-5 md:size-6 lg:size-7 xl:size-6 2xl:size-8 object-contain" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= Gallery ================== -->
+    <section class="mt-5 md:mt-7 lg:mt-9 xl:mt-12 mb-52 sm:mb-56 md:mb-60 lg:mb-64 xl:mb-72 2xl:mb-80">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex justify-between items-center mb-5 md:mb-6 lg:mb-8 xl:mb-10 2xl:mb-12">
+                    <button class="font-['Roboto'] cursor-pointer font-normal text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <span class="font-['Jost'] text-[#5D5D5D] font-normal text-sm lg:text-base xl:text-lg ml-auto">
+                        Home/ Tailor Details
+                    </span>
+            </div>
+            <div class="flex flex-col gap-8 md:gap-10 xl:gap-12">
+                <div class="bg-[#EAE0D6] p-5 md:p-6 lg:p-8 xl:p-10 2xl:p-12 rounded-lg md:rounded-xl lg:rounded-2xl flex flex-col gap-5">
+                    <div class="flex flex-col sm:flex-row gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-10">
+                        <div class="min-w-max">
+                            <img class="size-36 sm:size-40 md:size-44 lg:size-48 xl:size-52 2xl:size-56 object-cover object-top rounded-xl" src="./assets/images/ordered-product.png" alt="">
+                        </div>
+                        <div class="flex flex-col justify-between gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-10">
+                            <h4 class="font-['Roboto'] font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">Quality Tailor</h4>
+                            <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">
+                                Elegance Atelier, founded in 2015, offers timeless and modern fashion curated for individuality and craftsmanship.
+                            </span>
+                            <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-2 md:w-3 xl:w-4 overflow-visible"  viewBox="0 0 18 22" fill="none">
+                                    <path d="M8.73338 0C6.41807 0.0026685 4.19832 0.967336 2.56107 2.68238C0.92382 4.39742 0.00277919 6.72278 0 9.14834C0 11.5042 1.74125 15.191 5.17563 20.1062C5.58448 20.693 6.1198 21.1703 6.73803 21.4994C7.35625 21.8285 8.03992 22 8.73338 22C9.42684 22 10.1105 21.8285 10.7287 21.4994C11.347 21.1703 11.8823 20.693 12.2911 20.1062C15.7255 15.191 17.4668 11.5042 17.4668 9.14834C17.464 6.72278 16.5429 4.39742 14.9057 2.68238C13.2684 0.967336 11.0487 0.0026685 8.73338 0ZM8.73338 12.7948C8.04114 12.7948 7.36445 12.5798 6.78888 12.1769C6.21331 11.774 5.7647 11.2013 5.4998 10.5313C5.23489 9.86135 5.16558 9.1241 5.30063 8.41284C5.43567 7.70157 5.76902 7.04824 6.2585 6.53544C6.74799 6.02265 7.37163 5.67343 8.05056 5.53196C8.72949 5.39048 9.43323 5.46309 10.0728 5.74061C10.7123 6.01813 11.2589 6.4881 11.6435 7.09108C12.0281 7.69406 12.2334 8.40297 12.2334 9.12817C12.2334 10.1006 11.8646 11.0333 11.2083 11.7209C10.5519 12.4085 9.66163 12.7948 8.73338 12.7948Z" fill="#6E6E6E"/>
+                                </svg>
+                                Shop No 12, Galleria, 12th Avenue, Gaur City 2
+                            </span>
+                            <div class="flex flex-wrap gap-3 md:gap-4 xl:gap-5">
+                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs md:text-sm lg:text-base xl:text-lg py-1 px-4 bg-[#E0D8D2] rounded-full capitalize text-nowrap max-w-min">Custom Tailoring</label>
+                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs md:text-sm lg:text-base xl:text-lg py-1 px-4 bg-[#E0D8D2] rounded-full capitalize text-nowrap max-w-min">Alterations</label>
+                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs md:text-sm lg:text-base xl:text-lg py-1 px-4 bg-[#E0D8D2] rounded-full capitalize text-nowrap max-w-min">Bridal Wear</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-5 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-10 2xl:gap-12">
+                    <div class="w-full min-w-max md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl flex flex-col items-center gap-4 md:gap-5 lg:gap-6 xl:gap-7 2xl:gap-8">
+                        <div class="bg-[#E0D8D2] rounded-full p-2 md:p-2.5 xl:p-3">
+                            <button class="font-['Roboto'] text-white font-medium text-xs md:text-sm lg:text-base xl:text-lg py-1 px-4 rounded-full capitalize text-nowrap max-w-min cursor-pointer bg-[#333331]">Gallery</button>
+                            <button class="font-['Roboto'] text-[#333331] font-medium text-xs md:text-sm lg:text-base xl:text-lg py-1 px-4 rounded-full capitalize text-nowrap max-w-min cursor-pointer hover:text-white hover:bg-[#333331]">Speciality</button>
+                            <button class="font-['Roboto'] text-[#333331] font-medium text-xs md:text-sm lg:text-base xl:text-lg py-1 px-4 rounded-full capitalize text-nowrap max-w-min cursor-pointer hover:text-white hover:bg-[#333331]">Products</button>
+                        </div>
+                        <div class="w-full grid grid-cols-4 gap-3 md:gap-4 xl:gap-5">
+                            <img class="bg-[#C4C4C4] h-20 sm:h-40 md:h-30 lg:h-36 xl:h-52 2xl:h-60 rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" src="" alt="">
+                            <img class="bg-[#C4C4C4] h-20 sm:h-40 md:h-30 lg:h-36 xl:h-52 2xl:h-60 rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl col-span-2" src="" alt="">
+                            <img class="bg-[#C4C4C4] h-20 sm:h-40 md:h-30 lg:h-36 xl:h-52 2xl:h-60 rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" src="" alt="">
+                            <img class="bg-[#C4C4C4] h-20 sm:h-40 md:h-30 lg:h-36 xl:h-52 2xl:h-60 rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" src="" alt="">
+                            <img class="bg-[#C4C4C4] h-20 sm:h-40 md:h-30 lg:h-36 xl:h-52 2xl:h-60 rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl col-span-3" src="" alt="">
+                            <img class="bg-[#C4C4C4] h-20 sm:h-40 md:h-30 lg:h-36 xl:h-52 2xl:h-60 rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" src="" alt="">
+                            <img class="bg-[#C4C4C4] h-20 sm:h-40 md:h-30 lg:h-36 xl:h-52 2xl:h-60 rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl col-span-2" src="" alt="">
+                            <img class="bg-[#C4C4C4] h-20 sm:h-40 md:h-30 lg:h-36 xl:h-52 2xl:h-60 rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" src="" alt="">
+                        </div>
+                        <button class="px-4 md:px-5 lg:px-6 xl:px-7 2xl:px-8 py-1.5 md:py-2 lg:py-3.5 xl:py-3 2xl:py-4 cursor-pointer rounded-full bg-[#333331] text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-medium text-[#EFEFEF]">
+                            View All >
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-7 2xl:gap-8 w-full max-w-4xl overflow-hidden">
+                        <div>
+                            <h4 class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">Quality Tailor</h4>
+                        </div>
+                        <div class="flex items-start p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 bg-[#EAE0D6] rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl 2xl:rounded-4xl">
+                            <span class="font-medium font-['Roboto'] text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px] text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="min-w-max inline-block size-5 sm:size-6 md:size-7 lg:size-8 xl:size-10 2xl:size-12" viewBox="0 0 46 46" fill="none">
+                                    <rect width="46" height="46" fill="url(#pattern0_389_1096)" fill-opacity="0.7"/>
+                                    <defs>
+                                        <pattern id="pattern0_389_1096" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_389_1096" transform="scale(0.00195312)"/>
+                                        </pattern>
+                                        <image id="image0_389_1096" width="512" height="512" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
+                                Darzify is committed to showing genuine and verified reviews.
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-3 md:gap-4 xl:gap-5">
+                            <div>
+                                <h2 class="font-['Roboto'] font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">4.9/<span class="text-[#6E6E6E] ">5</span></h2>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-regular font-['Roboto'] text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px] text-black">Overall Ratings</span>
+                                <span class="font-regular font-['Roboto'] text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px] text-[#6E6E6E]">150 ratings</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold font-['Roboto'] text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px] text-black">Reviews</h3>
+                        </div>
+                        <div class="swiper reviews-swiper w-full!">
+                            <div class="swiper-wrapper w-full max-w-min max-h-min">
+                                <div class="swiper-slide size-14! md:size-16! lg:size-20! xl:size-24! 2xl:size-28!">
+                                    <img src="" class="bg-[#C4C4C4] size-full rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" alt="">
+                                </div>
+                                <div class="swiper-slide size-14! md:size-16! lg:size-20! xl:size-24! 2xl:size-28!">
+                                    <img src="" class="bg-[#C4C4C4] size-full rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" alt="">
+                                </div>
+                                <div class="swiper-slide size-14! md:size-16! lg:size-20! xl:size-24! 2xl:size-28!">
+                                    <img src="" class="bg-[#C4C4C4] size-full rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" alt="">
+                                </div>
+                                <div class="swiper-slide size-14! md:size-16! lg:size-20! xl:size-24! 2xl:size-28!">
+                                    <img src="" class="bg-[#C4C4C4] size-full rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" alt="">
+                                </div>
+                                <div class="swiper-slide size-14! md:size-16! lg:size-20! xl:size-24! 2xl:size-28!">
+                                    <img src="" class="bg-[#C4C4C4] size-full rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" alt="">
+                                </div>
+                                <div class="swiper-slide size-14! md:size-16! lg:size-20! xl:size-24! 2xl:size-28!">
+                                    <img src="" class="bg-[#C4C4C4] size-full rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" alt="">
+                                </div>
+                                <div class="swiper-slide size-14! md:size-16! lg:size-20! xl:size-24! 2xl:size-28!">
+                                    <img src="" class="bg-[#C4C4C4] size-full rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" alt="">
+                                </div>
+                                <div class="swiper-slide size-14! md:size-16! lg:size-20! xl:size-24! 2xl:size-28!">
+                                    <img src="" class="bg-[#C4C4C4] size-full rounded-md md:rounded-lg lg:rounded-xl xl:rounded-2xl 2xl:rounded-3xl" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-7 2xl:gap-8">
+                            <div class="bg-[#EAE0D6] rounded-lg md:rounded-xl xl:rounded-2xl p-3 md:p-4 xl:p-5">
+                                <div class="flex items-center justify-between mb-2 md:mb-2.5 xl:mb-3">
+                                    <div class="flex items-center gap-2 md:gap-3 xl:gap-4">
+                                        <div class="flex items-center justify-center gap-2.5 rounded-full">
+                                            <div class="text-[#E09900] min-w-max">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="size-4 md:size-5 xl:size-6" viewBox="0 0 22 22" fill="currentColor">
+                                                    <path d="M21.8457 8.14798C21.6582 7.53138 21.2835 6.9935 20.7771 6.61387C20.2707 6.23424 19.6595 6.03302 19.0338 6.03996H15.0282L13.8115 2.12318C13.6202 1.50665 13.2443 0.968803 12.7379 0.587212C12.2315 0.205621 11.6209 0 10.9941 0C10.3673 0 9.75669 0.205621 9.25032 0.587212C8.74396 0.968803 8.36801 1.50665 8.17668 2.12318L6.96005 6.03996H2.95441C2.33072 6.04088 1.72327 6.24535 1.21882 6.62417C0.71437 7.00299 0.338719 7.53677 0.145525 8.14929C-0.0476699 8.7618 -0.048525 9.42172 0.143081 10.0348C0.334688 10.6478 0.708954 11.1826 1.21242 11.5628L4.47268 14.025L3.23312 17.9901C3.03281 18.6051 3.03027 19.2705 3.22589 19.887C3.42151 20.5036 3.80481 21.0384 4.31865 21.4116C4.82369 21.7968 5.43571 22.0032 6.06353 22C6.69134 21.9967 7.30133 21.784 7.80262 21.3936L10.9941 18.9674L14.1865 21.3908C14.6906 21.7738 15.2994 21.9818 15.9252 21.985C16.551 21.9881 17.1616 21.7862 17.6694 21.4083C18.1771 21.0304 18.5557 20.4959 18.7508 19.8817C18.9459 19.2675 18.9474 18.6053 18.7551 17.9901L17.5155 14.025L20.7795 11.5628C21.2887 11.1874 21.6673 10.6526 21.8594 10.0376C22.0514 9.42253 22.0466 8.75998 21.8457 8.14798Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                            <span class="font-['Roboto'] font-semibold text-black text-sm md:text-base xl:text-lg">4.0</span>
+                                        </div>
+                                        <h3 class=" font-semibold font-['Roboto'] text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl text-black">Best Tailor</h3>
+                                    </div>
+                                    <div>
+                                        <span class="font-['Roboto'] font-normal text-xs">5 days ago</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="font-['Roboto'] font-normal text-black text-sm md:text-base xl:text-lg">Review Remark.....</span>
+                                </div>
+                                <div class="flex gap-2 md:gap-3 xl:gap-4 mt-5 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 2xl:mt-14">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="min-w-max size-3.5 md:size-4 xl:size-5" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_389_1119)">
+                                            <path d="M17.2465 19.7102H15.604V15.5686C15.6033 14.9248 15.3472 14.3075 14.892 13.8522C14.4367 13.3969 13.8194 13.1408 13.1755 13.1402H6.53483C5.89097 13.1408 5.27366 13.3969 4.81838 13.8522C4.3631 14.3075 4.10703 14.9248 4.10638 15.5686V19.7102H2.46387V15.5686C2.46517 14.4894 2.89449 13.4547 3.65767 12.6915C4.42084 11.9283 5.45555 11.499 6.53483 11.4977H13.1755C14.2548 11.499 15.2895 11.9283 16.0527 12.6915C16.8158 13.4547 17.2452 14.4894 17.2465 15.5686V19.7102Z" fill="#333331"/>
+                                            <path d="M9.85527 9.85507C8.8807 9.85507 7.92801 9.56608 7.11768 9.02464C6.30735 8.48319 5.67578 7.71361 5.30282 6.81323C4.92987 5.91284 4.83229 4.92207 5.02242 3.96622C5.21255 3.01038 5.68185 2.13237 6.37098 1.44324C7.06011 0.754116 7.93811 0.284814 8.89396 0.0946834C9.84981 -0.0954466 10.8406 0.00213503 11.741 0.375089C12.6413 0.748042 13.4109 1.37962 13.9524 2.18995C14.4938 3.00028 14.7828 3.95296 14.7828 4.92754C14.7815 6.234 14.2619 7.48658 13.3381 8.41039C12.4143 9.3342 11.1617 9.85377 9.85527 9.85507ZM9.85527 1.64251C9.20556 1.64251 8.57043 1.83518 8.03021 2.19614C7.48999 2.5571 7.06894 3.07015 6.82031 3.67041C6.57167 4.27067 6.50662 4.93118 6.63337 5.56842C6.76012 6.20565 7.07299 6.79098 7.53241 7.2504C7.99183 7.70982 8.57716 8.02269 9.2144 8.14944C9.85163 8.2762 10.5121 8.21114 11.1124 7.96251C11.7127 7.71387 12.2257 7.29282 12.5867 6.7526C12.9476 6.21238 13.1403 5.57725 13.1403 4.92754C13.1403 4.0563 12.7942 3.22074 12.1781 2.60468C11.5621 1.98861 10.7265 1.64251 9.85527 1.64251Z" fill="#333331"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_389_1119">
+                                                <rect width="19.7101" height="19.7101" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="font-['Roboto'] font-normal text-black text-xs md:text-sm xl:text-base">
+                                        Garima Singh
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bg-[#EAE0D6] rounded-lg md:rounded-xl xl:rounded-2xl p-3 md:p-4 xl:p-5">
+                                <div class="flex items-center justify-between mb-2 md:mb-2.5 xl:mb-3">
+                                    <div class="flex items-center gap-2 md:gap-3 xl:gap-4">
+                                        <div class="flex items-center justify-center gap-2.5 rounded-full">
+                                            <div class="text-[#E09900] min-w-max">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="size-4 md:size-5 xl:size-6" viewBox="0 0 22 22" fill="currentColor">
+                                                    <path d="M21.8457 8.14798C21.6582 7.53138 21.2835 6.9935 20.7771 6.61387C20.2707 6.23424 19.6595 6.03302 19.0338 6.03996H15.0282L13.8115 2.12318C13.6202 1.50665 13.2443 0.968803 12.7379 0.587212C12.2315 0.205621 11.6209 0 10.9941 0C10.3673 0 9.75669 0.205621 9.25032 0.587212C8.74396 0.968803 8.36801 1.50665 8.17668 2.12318L6.96005 6.03996H2.95441C2.33072 6.04088 1.72327 6.24535 1.21882 6.62417C0.71437 7.00299 0.338719 7.53677 0.145525 8.14929C-0.0476699 8.7618 -0.048525 9.42172 0.143081 10.0348C0.334688 10.6478 0.708954 11.1826 1.21242 11.5628L4.47268 14.025L3.23312 17.9901C3.03281 18.6051 3.03027 19.2705 3.22589 19.887C3.42151 20.5036 3.80481 21.0384 4.31865 21.4116C4.82369 21.7968 5.43571 22.0032 6.06353 22C6.69134 21.9967 7.30133 21.784 7.80262 21.3936L10.9941 18.9674L14.1865 21.3908C14.6906 21.7738 15.2994 21.9818 15.9252 21.985C16.551 21.9881 17.1616 21.7862 17.6694 21.4083C18.1771 21.0304 18.5557 20.4959 18.7508 19.8817C18.9459 19.2675 18.9474 18.6053 18.7551 17.9901L17.5155 14.025L20.7795 11.5628C21.2887 11.1874 21.6673 10.6526 21.8594 10.0376C22.0514 9.42253 22.0466 8.75998 21.8457 8.14798Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                            <span class="font-['Roboto'] font-semibold text-black text-sm md:text-base xl:text-lg">4.0</span>
+                                        </div>
+                                        <h3 class=" font-semibold font-['Roboto'] text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl text-black">Best Tailor</h3>
+                                    </div>
+                                    <div>
+                                        <span class="font-['Roboto'] font-normal text-xs">5 days ago</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="font-['Roboto'] font-normal text-black text-sm md:text-base xl:text-lg">Review Remark.....</span>
+                                </div>
+                                <div class="flex gap-2 md:gap-3 xl:gap-4 mt-5 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 2xl:mt-14">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="min-w-max size-3.5 md:size-4 xl:size-5" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_389_1119)">
+                                            <path d="M17.2465 19.7102H15.604V15.5686C15.6033 14.9248 15.3472 14.3075 14.892 13.8522C14.4367 13.3969 13.8194 13.1408 13.1755 13.1402H6.53483C5.89097 13.1408 5.27366 13.3969 4.81838 13.8522C4.3631 14.3075 4.10703 14.9248 4.10638 15.5686V19.7102H2.46387V15.5686C2.46517 14.4894 2.89449 13.4547 3.65767 12.6915C4.42084 11.9283 5.45555 11.499 6.53483 11.4977H13.1755C14.2548 11.499 15.2895 11.9283 16.0527 12.6915C16.8158 13.4547 17.2452 14.4894 17.2465 15.5686V19.7102Z" fill="#333331"/>
+                                            <path d="M9.85527 9.85507C8.8807 9.85507 7.92801 9.56608 7.11768 9.02464C6.30735 8.48319 5.67578 7.71361 5.30282 6.81323C4.92987 5.91284 4.83229 4.92207 5.02242 3.96622C5.21255 3.01038 5.68185 2.13237 6.37098 1.44324C7.06011 0.754116 7.93811 0.284814 8.89396 0.0946834C9.84981 -0.0954466 10.8406 0.00213503 11.741 0.375089C12.6413 0.748042 13.4109 1.37962 13.9524 2.18995C14.4938 3.00028 14.7828 3.95296 14.7828 4.92754C14.7815 6.234 14.2619 7.48658 13.3381 8.41039C12.4143 9.3342 11.1617 9.85377 9.85527 9.85507ZM9.85527 1.64251C9.20556 1.64251 8.57043 1.83518 8.03021 2.19614C7.48999 2.5571 7.06894 3.07015 6.82031 3.67041C6.57167 4.27067 6.50662 4.93118 6.63337 5.56842C6.76012 6.20565 7.07299 6.79098 7.53241 7.2504C7.99183 7.70982 8.57716 8.02269 9.2144 8.14944C9.85163 8.2762 10.5121 8.21114 11.1124 7.96251C11.7127 7.71387 12.2257 7.29282 12.5867 6.7526C12.9476 6.21238 13.1403 5.57725 13.1403 4.92754C13.1403 4.0563 12.7942 3.22074 12.1781 2.60468C11.5621 1.98861 10.7265 1.64251 9.85527 1.64251Z" fill="#333331"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_389_1119">
+                                                <rect width="19.7101" height="19.7101" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="font-['Roboto'] font-normal text-black text-xs md:text-sm xl:text-base">
+                                        Garima Singh
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bg-[#EAE0D6] rounded-lg md:rounded-xl xl:rounded-2xl p-3 md:p-4 xl:p-5">
+                                <div class="flex items-center justify-between mb-2 md:mb-2.5 xl:mb-3">
+                                    <div class="flex items-center gap-2 md:gap-3 xl:gap-4">
+                                        <div class="flex items-center justify-center gap-2.5 rounded-full">
+                                            <div class="text-[#E09900] min-w-max">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="size-4 md:size-5 xl:size-6" viewBox="0 0 22 22" fill="currentColor">
+                                                    <path d="M21.8457 8.14798C21.6582 7.53138 21.2835 6.9935 20.7771 6.61387C20.2707 6.23424 19.6595 6.03302 19.0338 6.03996H15.0282L13.8115 2.12318C13.6202 1.50665 13.2443 0.968803 12.7379 0.587212C12.2315 0.205621 11.6209 0 10.9941 0C10.3673 0 9.75669 0.205621 9.25032 0.587212C8.74396 0.968803 8.36801 1.50665 8.17668 2.12318L6.96005 6.03996H2.95441C2.33072 6.04088 1.72327 6.24535 1.21882 6.62417C0.71437 7.00299 0.338719 7.53677 0.145525 8.14929C-0.0476699 8.7618 -0.048525 9.42172 0.143081 10.0348C0.334688 10.6478 0.708954 11.1826 1.21242 11.5628L4.47268 14.025L3.23312 17.9901C3.03281 18.6051 3.03027 19.2705 3.22589 19.887C3.42151 20.5036 3.80481 21.0384 4.31865 21.4116C4.82369 21.7968 5.43571 22.0032 6.06353 22C6.69134 21.9967 7.30133 21.784 7.80262 21.3936L10.9941 18.9674L14.1865 21.3908C14.6906 21.7738 15.2994 21.9818 15.9252 21.985C16.551 21.9881 17.1616 21.7862 17.6694 21.4083C18.1771 21.0304 18.5557 20.4959 18.7508 19.8817C18.9459 19.2675 18.9474 18.6053 18.7551 17.9901L17.5155 14.025L20.7795 11.5628C21.2887 11.1874 21.6673 10.6526 21.8594 10.0376C22.0514 9.42253 22.0466 8.75998 21.8457 8.14798Z" fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                            <span class="font-['Roboto'] font-semibold text-black text-sm md:text-base xl:text-lg">4.0</span>
+                                        </div>
+                                        <h3 class=" font-semibold font-['Roboto'] text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl text-black">Best Tailor</h3>
+                                    </div>
+                                    <div>
+                                        <span class="font-['Roboto'] font-normal text-xs">5 days ago</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="font-['Roboto'] font-normal text-black text-sm md:text-base xl:text-lg">Review Remark.....</span>
+                                </div>
+                                <div class="flex gap-2 md:gap-3 xl:gap-4 mt-5 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12 2xl:mt-14">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="min-w-max size-3.5 md:size-4 xl:size-5" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_389_1119)">
+                                            <path d="M17.2465 19.7102H15.604V15.5686C15.6033 14.9248 15.3472 14.3075 14.892 13.8522C14.4367 13.3969 13.8194 13.1408 13.1755 13.1402H6.53483C5.89097 13.1408 5.27366 13.3969 4.81838 13.8522C4.3631 14.3075 4.10703 14.9248 4.10638 15.5686V19.7102H2.46387V15.5686C2.46517 14.4894 2.89449 13.4547 3.65767 12.6915C4.42084 11.9283 5.45555 11.499 6.53483 11.4977H13.1755C14.2548 11.499 15.2895 11.9283 16.0527 12.6915C16.8158 13.4547 17.2452 14.4894 17.2465 15.5686V19.7102Z" fill="#333331"/>
+                                            <path d="M9.85527 9.85507C8.8807 9.85507 7.92801 9.56608 7.11768 9.02464C6.30735 8.48319 5.67578 7.71361 5.30282 6.81323C4.92987 5.91284 4.83229 4.92207 5.02242 3.96622C5.21255 3.01038 5.68185 2.13237 6.37098 1.44324C7.06011 0.754116 7.93811 0.284814 8.89396 0.0946834C9.84981 -0.0954466 10.8406 0.00213503 11.741 0.375089C12.6413 0.748042 13.4109 1.37962 13.9524 2.18995C14.4938 3.00028 14.7828 3.95296 14.7828 4.92754C14.7815 6.234 14.2619 7.48658 13.3381 8.41039C12.4143 9.3342 11.1617 9.85377 9.85527 9.85507ZM9.85527 1.64251C9.20556 1.64251 8.57043 1.83518 8.03021 2.19614C7.48999 2.5571 7.06894 3.07015 6.82031 3.67041C6.57167 4.27067 6.50662 4.93118 6.63337 5.56842C6.76012 6.20565 7.07299 6.79098 7.53241 7.2504C7.99183 7.70982 8.57716 8.02269 9.2144 8.14944C9.85163 8.2762 10.5121 8.21114 11.1124 7.96251C11.7127 7.71387 12.2257 7.29282 12.5867 6.7526C12.9476 6.21238 13.1403 5.57725 13.1403 4.92754C13.1403 4.0563 12.7942 3.22074 12.1781 2.60468C11.5621 1.98861 10.7265 1.64251 9.85527 1.64251Z" fill="#333331"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_389_1119">
+                                                <rect width="19.7101" height="19.7101" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="font-['Roboto'] font-normal text-black text-xs md:text-sm xl:text-base">
+                                        Garima Singh
+                                    </span>
+                                </div>
+                            </div>
+                            <button class="cursor-pointer font-['Roboto'] font-semibold text-black text-sm md:text-base xl:text-lg">
+                                View all reviews >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- ================= Footer ================== -->
+    <footer class="bg-[#EAE0D6]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex flex-wrap gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-5 justify-between pt-32 md:pt-40 lg:pt-48 xl:pt-56 pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+                <div class="max-w-sm flex gap-8 flex-col">
+                    <img src="./assets/images/footer-logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt="">
+                    <p class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+                    </p>
+                    <div class="flex items-baseline-last gap-6 ">
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Facebook.png" alt="Facebook"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Twitter.png" alt="Twitter"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Instagram.png" alt="Instagram"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/LinkedIn.png" alt="LinkedIn"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/YouTube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Product
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Features</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Pricing</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Case studies</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Reviews</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Updates</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Company
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">About</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Contact us</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Careers</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Culture</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Blog</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Support
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Getting started
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Help center
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Server status
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Report a bug
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Chat support
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Contact us</h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Email.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        contact@company.com
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Phone.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        (414) 687 - 5892
+                    </a>
+                    <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Mark.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        794 Mcallister St San Francisco, 94102
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 md:flex-row items-center  md:justify-between pb-2 md:pb-4 lg:pb-6 xl:pb-8">
+                <p class="font-['DM_Sans'] text-[#6F6C90] font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    Copyright © 2025 Darzify
+                </p>
+                <div class="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    <span class="font-['DM_Sans'] text-[#6F6C90] font-normal ">All Rights Reserved</span>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Terms and Conditions</a>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= Scripts ================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        // ==================== font seoul-namsan ===============
+        (function (d) {
+            var config = {
+                kitId: 'pug2vcj',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+
+        // ================ Swiper Js =====================
+
+       //  Reviews swiper
+        var swiper = new Swiper(".reviews-swiper", {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 12,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 12,
+                },
+                1024: {
+                    spaceBetween: 10,
+                },
+                768: {
+                    spaceBetween: 8,
+                },
+                0: {
+                    spaceBetween: 6,
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -19,9 +19,7 @@
     <!-- Jost and Roboto Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Title -->
     <title>Darzify</title>
@@ -61,130 +59,82 @@
         </div>
     </header>
 
-    <!-- ================= All orders ================== -->
+    <!-- ================= Gallery ================== -->
     <section class="mt-5 md:mt-7 lg:mt-9 xl:mt-12 mb-52 sm:mb-56 md:mb-60 lg:mb-64 xl:mb-72 2xl:mb-80">
-        <div class="mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
-            <div class="w-full max-w-4xl mx-auto">
-                <div class="flex justify-between items-center mb-12">
-                    <div><h3 class="font-['Roboto'] text-nowrap font-medium text-base md:text-lg lg:text-xl xl:text-2xl">All Orders</h3></div>
-                    <div class="flex w-full justify-end gap-2.5 md:gap-4">
-                        <label for="search-order" class="border cursor-text border-[#6E6E6E] h-10 md:h-12 px-2.5 md:px-3.5 w-auto md:max-w-sm xl:max-w-md flex items-center gap-3 rounded-xl font-['Roboto'] font-normal text-sm md:text-base lg:text-lg xl:text-xl">
-                            <img src="./assets/icons/magnifying-glass-dark.png" class="size-4 lg:size-5 object-contain" alt="">
-                            <input class="w-full outline-none hidden md:block" id="search-order" placeholder="Search in orders" type="text">
-                        </label>
-                        <button class="border cursor-pointer border-[#6E6E6E] flex justify-center items-center w-auto md:w-40 lg:w-44 xl:w-48 h-10 md:h-12 p-2.5 md:p-3.5 gap-3.5 rounded-xl">
-                            <img src="./assets/icons/filters-icon.png" class="size-5 lg:size-6 object-contain" alt="">
-                            <span class="font-['Roboto'] font-medium text-sm md:text-base lg:text-lg xl:text-xl hidden md:block" >Filters</span>
-                        </button>
-                    </div>
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex justify-between items-center mb-5 md:mb-6 lg:mb-8 xl:mb-10 2xl:mb-12">
+                <div class="flex items-center">
+                    <button class="font-['Roboto'] cursor-pointer font-medium text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl mr-3 md:mr-5 lg:mr-8 xl:mr-12"><i class="fa-solid fa-chevron-left"></i></button>
+                    <h3 class="font-['Roboto'] font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">Profile</h3>
                 </div>
-                <div class="flex flex-col gap-12">
-                    <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl lg:rounded-2xl flex flex-col gap-5">
-                        <div class="flex gap-2 sm:gap-3.5">
-                            <div>
-                                <img class="size-20 sm:size-24 md:size-28 object-cover object-top rounded-xl" src="./assets/images/ordered-product.png" alt="">
-                            </div>
-                            <div class="flex flex-col">
-                                <h4 class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Black Oversized Shirt</h4>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Black Oversized Shirt</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Size: M</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Tailor: PILGRIM GREY</span>
-                            </div>
-                            <div class="flex items-center ml-auto">
-                                <button class=" text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl cursor-pointer">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="border border-[#EEECEB] w-full"> <!-- seprater line --> </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col gap-2.5">
-                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-1 px-4 bg-[#E7E4CA] rounded-full uppercase max-w-min">STITCHING</label>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Ordered On Fri, 1 Aug</span>
-                            </div>
-                             <div class="flex flex-nowrap items-center gap-1">
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-4 md:px-6 border text-[#333331] border-[#333331] cursor-pointer">Track</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl lg:rounded-2xl flex flex-col gap-5">
-                        <div class="flex gap-2 sm:gap-3.5">
-                            <div>
-                                <img class="size-20 sm:size-24 md:size-28 object-cover object-top rounded-xl" src="./assets/images/ordered-product.png" alt="">
-                            </div>
-                            <div class="flex flex-col">
-                                <h4 class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Black Oversized Shirt</h4>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Black Oversized Shirt</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Size: M</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Tailor: PILGRIM GREY</span>
-                            </div>
-                            <div class="flex items-center ml-auto">
-                                <button class=" text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl cursor-pointer">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="border border-[#EEECEB] w-full"> <!-- seprater line --> </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col gap-2.5">
-                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-1 px-4 bg-[#D4D8EA] rounded-full uppercase max-w-min">Ordered</label>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Ordered On Fri, 1 Aug</span>
-                            </div>
-                            <div class="flex flex-nowrap items-center gap-1">
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-4 md:px-6 border text-[#333331] border-[#333331] cursor-pointer">Track</button>
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-4 md:px-6 border text-[#6E6E6E] border-[#333331] cursor-pointer">Cancel</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl lg:rounded-2xl flex flex-col gap-5">
-                        <div class="flex gap-2 sm:gap-3.5">
-                            <div>
-                                <img class="size-20 sm:size-24 md:size-28 object-cover object-top rounded-xl" src="./assets/images/ordered-product.png" alt="">
-                            </div>
-                            <div class="flex flex-col">
-                                <h4 class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Black Oversized Shirt</h4>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Black Oversized Shirt</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Size: M</span>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Tailor: PILGRIM GREY</span>
-                            </div>
-                            <div class="flex items-center ml-auto">
-                                <button class=" text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl cursor-pointer">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="border border-[#EEECEB] w-full"> <!-- seprater line --> </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col gap-2.5">
-                                <label class="font-['Roboto'] text-[#333331] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-1 px-4 bg-[#ECE5DF] rounded-full uppercase max-w-min">Delevered</label>
-                                <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base">Ordered On Fri, 1 Aug</span>
-                            </div>
-                             <div class="flex flex-nowrap items-center gap-1">
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-4 md:px-6 border text-[#333331] border-[#333331] cursor-pointer">Retern/Exchange</button>
-                            </div>
-                        </div>
-                        <div class="border border-[#EEECEB] w-full"> <!-- seprater line --> </div>
-                        <div class="mb-2 md:mb-3 lg:mb-4 xl:mb-5 flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                                <img class="size-4 md:size-5 lg:size-6 xl:size-7 cursor-pointer" src="./assets/icons/rating-star.png" alt="rating star">
-                            </div>
-                            <div>
-                                <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded-full py-1 md:py-1.5 px-6 text-[#333331] border-[#333331] cursor-pointer">Review</button>
-                            </div>
-                        </div>
-                    </div>
+                <span class="font-['Jost'] text-[#5D5D5D] font-normal text-sm lg:text-base xl:text-lg ml-auto">Home/ Tailor Details</span>
+            </div>
+            <div class="w-full columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-4">
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/bouti-3.png" alt="">
                 </div>
-                <div class="mt-3.5 md:mt-5 lg:mt-7 xl:mt-9 flex justify-between">
-                    <div>
-                        <span class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#6E6E6E]">Showing 1-10 out of 20</span>
-                    </div>
-                    <div>
-                        <button class="font-['Roboto'] font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl  text-[#333331] cursor-pointer">Next ></button>
-                    </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/bouti-4.png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/bouti-2.png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/bouti-1.png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (11).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (12).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (10).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (2).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (3).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (4).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (6).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (4).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (5).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (8).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (6).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (9).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (7).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (3).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (4).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (2).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (7).png" alt="">
+                </div>
+                <div class="break-inside-avoid overflow-hidden rounded-xl mb-4">
+                    <img class="w-auto h-auto rounded-xl" src="./assets/images/p-img (9).png" alt="">
                 </div>
             </div>
         </div>
@@ -294,6 +244,36 @@
             },
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
+
+        // ================ Swiper Js =====================
+
+       //  Reviews swiper
+        var swiper = new Swiper(".reviews-swiper", {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 12,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 12,
+                },
+                1024: {
+                    spaceBetween: 10,
+                },
+                768: {
+                    spaceBetween: 8,
+                },
+                0: {
+                    spaceBetween: 6,
+                }
+            }
+        });
+
     </script>
 
 </body>
