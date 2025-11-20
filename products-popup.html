@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file -->
+    <link href="./tailwind.css" rel="stylesheet">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Jost and Roboto Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Title -->
+    <title>Darzify</title>
+</head>
+
+<body class="bg-[#ECE6DF] overflow-hidden">
+    <!--======================== Header =======================-->
+    <header class="bg-[#333331]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="h-16 md:h-18 xl:h-20 2xl:h-24 flex justify-between items-center">
+                <div class=" flex justify-start items-center gap-2.5">
+                    <div>
+                        <span class="uppercase text-[22px] md:text-2xl lg:text-[28px] xl:text-[32px] 2xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
+                    </div>
+                    <div class="flex items-center text-[#EAE0D6] gap-1 md:gap-1.5">
+                        <img src="./assets/icons/location-pin.png" class="size-4 md:size-4.5 lg:size-4 xl:size-5 2xl:size-6"
+                            alt="location-pin">
+                        <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium font-['Jost'] hidden md:block ">Gaur City 2, Noida</span>
+                            <button class="cursor-pointer">
+                                <i class="fa-solid fa-chevron-down text-xs lg:text-sm xl:text-base"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="w-auto lg:w-1/2 flex items-center justify-end gap-2 sm:gap-3 md:gap-4">
+                    <div class="cursor-pointer lg:cursor-text lg:w-full lg:max-w-80 xl:max-w-96 size-6 md:size-8 lg:h-10  xl:h-12 2xl:h-14 flex items-center justify-center border border-[#EAE0D6] rounded-md md:rounded-lg lg:rounded-xl ">
+                        <img src="./assets/icons/magnifying-glass.png" class="size-3 md:size-4 lg:m-3" alt="magnifying-glass" />
+                        <input type="text" placeholder="Search for ‘boutiques’" class="text-xl placeholder:text-[#6E6E6E] text-[#EAE0D6] font-['Roboto'] h-full w-full outline-none border-none hidden lg:block">
+                    </div>
+                    <button class="text-[#333331] bg-[#ECE6DF] cursor-pointer size-6 md:size-8 lg:size-10 xl:size-12 2xl:size-14 rounded-md md:rounded-lg lg:rounded-xl flex justify-center items-center">
+                        <i class="fa-regular fa-user text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"></i>
+                    </button>
+                    <button class="bg-[#333331] cursor-pointer size-8 md:size-10 lg:size-12 xl:size-14 flex justify-center items-center">
+                        <img src="./assets/icons/shopping-bag.png" class="size-5 md:size-6 lg:size-7 xl:size-6 2xl:size-8 object-contain" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= Products ================== -->
+    <section class="mt-5 md:mt-7 lg:mt-9 xl:mt-12 mb-52 sm:mb-56 md:mb-60 lg:mb-64 xl:mb-72 2xl:mb-80">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex justify-between items-center mb-5 md:mb-6 lg:mb-8 xl:mb-10 2xl:mb-12">
+                <div class="flex items-center">
+                    <button class="font-['Roboto'] cursor-pointer font-medium text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl mr-3 md:mr-5 lg:mr-8 xl:mr-12"><i class="fa-solid fa-chevron-left"></i></button>
+                    <h3 class="font-['Roboto'] font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">Products</h3>
+                </div>
+                <span class="font-['Jost'] text-[#5D5D5D] font-normal text-sm lg:text-base xl:text-lg ml-auto">Home/ Tailor Details</span>
+            </div>
+            <div class="w-full flex flex-wrap justify-center gap-4 md:gap-5 xl:gap-6">
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1.5 md:p-2 2xl:p-3 bg-white flex flex-col gap-4 rounded-2xl cursor-pointer w-full max-w-52">
+                    <div class="relative">
+                        <img class="w-full object-contain rounded-lg" src="./assets/images/product-img.png" alt="">
+                        <div class="absolute bottom-1.5 right-1.5 bg-white/30 backdrop-blur-xs flex items-baseline-last pb-0.5 justify-center w-14 h-6 gap-2 rounded-full">
+                            <img src="./assets/icons/star.png" class="size-3" alt="">
+                            <span class="font-['Roboto'] font-semibold text-black text-xs">4.0</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <span class="capitalize font-['Roboto'] font-medium text-[#333331] text-xs md:text-sm lg:text-base ">Traditional High Neck Blouse</span>
+                        </div>
+                        <div class="flex gap-1.5 items-center flex-wrap">
+                            <span class="font-['Roboto'] font-bold text-[#333331] text-xs lg:text-sm xl:text-lg">₹499/-</span>
+                            <span class="font-['Roboto'] font-normal text-[#6E6E6E] text-xs md:text-sm lg:text-base "><del>₹699</del></span>
+                            <span class="uppercase font-['Roboto'] font-normal text-[#5906F3] text-xs md:text-sm lg:text-base">20% off</span>
+                        </div>
+                        <div class="flex gap-3 justify-between items-center">
+                            <button class="cursor-pointer capitalize py-1.5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 border text-[#333331] border-[#6E6E6E] rounded-xl text-base font-semibold text-nowrap">add to bag</button>
+                            <button class="cursor-pointer min-w-max rounded-full bg-[#EFEFEF] size-9 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-3 md:size-4 xl:size-5" viewBox="0 0 20 18" fill="none">
+                                    <path d="M14.3529 0C13.4296 0.0144521 12.5264 0.273822 11.7346 0.751918C10.9428 1.23001 10.2904 1.9099 9.84323 2.72293C9.39607 1.9099 8.74364 1.23001 7.95183 0.751918C7.16002 0.273822 6.25686 0.0144521 5.33357 0C3.86173 0.0643525 2.47502 0.712297 1.4764 1.80228C0.477779 2.89226 -0.0515819 4.33567 0.00396941 5.81717C0.00396941 9.56904 3.9282 13.6666 7.21943 16.4449C7.95427 17.0663 8.88338 17.407 9.84323 17.407C10.8031 17.407 11.7322 17.0663 12.467 16.4449C15.7583 13.6666 19.6825 9.56904 19.6825 5.81717C19.738 4.33567 19.2087 2.89226 18.2101 1.80228C17.2114 0.712297 15.8247 0.0643525 14.3529 0ZM11.4134 15.1824C10.9739 15.5548 10.4178 15.7591 9.84323 15.7591C9.26866 15.7591 8.71255 15.5548 8.27305 15.1824C4.06021 11.6253 1.64385 8.21252 1.64385 5.81717C1.5878 4.77315 1.94424 3.74917 2.63545 2.96857C3.32666 2.18797 4.29654 1.71408 5.33357 1.65026C6.3706 1.71408 7.34049 2.18797 8.03169 2.96857C8.7229 3.74917 9.07934 4.77315 9.02329 5.81717C9.02329 6.03601 9.10968 6.24588 9.26345 6.40063C9.41722 6.55537 9.62577 6.6423 9.84323 6.6423C10.0607 6.6423 10.2692 6.55537 10.423 6.40063C10.5768 6.24588 10.6632 6.03601 10.6632 5.81717C10.6071 4.77315 10.9636 3.74917 11.6548 2.96857C12.346 2.18797 13.3159 1.71408 14.3529 1.65026C15.3899 1.71408 16.3598 2.18797 17.051 2.96857C17.7422 3.74917 18.0987 4.77315 18.0426 5.81717C18.0426 8.21252 15.6263 11.6253 11.4134 15.1791V15.1824Z" fill="#6E6E6E"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Popup ================== -->
+     <section class="bg-black/50 inset-0 fixed flex items-center justify-center size-full px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+        <div class="bg-[#ECE6DF] w-full max-w-xl p-6 md:p-8 xl:p-10 rounded-3xl">
+            <div class="flex justify-end mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14">
+                <button class="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 md:size-4 xl:size-5" viewBox="0 0 21 20" fill="none">
+                        <path d="M0 1.07934C0.0219132 1.01908 0.0451959 0.959729 0.065283 0.899011C0.357915 0.0138097 1.44353 -0.287497 2.1484 0.321964C2.22693 0.389986 2.29906 0.465769 2.37301 0.53927C4.86107 3.02642 7.34913 5.51356 9.83582 8.00253C9.88969 8.05686 9.92393 8.13082 9.9673 8.19564C9.99561 8.19382 10.0244 8.19199 10.0527 8.19062C10.0974 8.12671 10.1339 8.05458 10.1878 8.00025C12.7064 5.47932 15.2265 2.95976 17.7474 0.44066C18.1939 -0.0058208 18.7654 -0.119495 19.2827 0.12931C20.0328 0.490878 20.2551 1.44684 19.7388 2.10013C19.6744 2.18139 19.5995 2.25535 19.526 2.32885C17.0247 4.8306 14.523 7.33144 12.0207 9.83228C11.9655 9.88752 11.9025 9.93409 11.798 10.024C11.8884 10.0884 11.9591 10.1249 12.013 10.1788C14.5344 12.697 17.0535 15.2174 19.5753 17.7356C19.9163 18.0762 20.088 18.4716 19.9939 18.9536C19.8944 19.4645 19.5835 19.7968 19.0909 19.9617C19.0608 19.9717 19.0325 19.9872 19.0033 20H18.4167C18.0419 19.8726 17.7711 19.606 17.499 19.333C15.0607 16.8897 12.6188 14.4505 10.1778 12.0104C10.1243 11.9569 10.0682 11.9058 9.98328 11.825C9.92347 11.9017 9.88102 11.9693 9.82669 12.0241C7.37744 14.4747 4.9259 16.9226 2.47893 19.3755C2.22008 19.6352 1.95712 19.879 1.6024 20H1.01577C0.736831 19.9009 0.462459 19.7832 0.293089 19.5298C0.173936 19.3499 0.0963267 19.1408 0 18.945C0 18.8016 0 18.6583 0 18.5149C0.0885658 18.1232 0.337828 17.8406 0.614026 17.5654C3.082 15.1056 5.54403 12.6404 8.00972 10.1788C8.06359 10.1254 8.13664 10.0911 8.2389 10.0222C8.12157 9.92907 8.05492 9.88615 7.99968 9.83091C5.53901 7.37253 3.08154 4.91186 0.618134 2.45713C0.341937 2.18139 0.0940441 1.89834 0 1.50938C0 1.36604 0 1.22269 0 1.07934Z" fill="black"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full flex flex-col items-center mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16 2xl:mb-20">
+                <h3 class="font-['Roboto'] text-[#333331] text-center font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl flex-nowrap mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3 xl:mb-3.5 2xl:mb-4">Replace Cart Items?</h3>
+                <span class="font-['Roboto'] text-[#333331] text-center font-normal text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl">
+                    You can only add products from one vendor at a time. Adding this item will replace your current cart.
+                </span>
+            </div>
+            <div class="flex flex-wrap sm:flex-nowrap justify-center gap-3.5 md:gap-4 xl:gap-5">
+                <button class="text-nowrap font-['Roboto'] w-full rounded-full py-3 md:py-3.5 xl:py-4 cursor-pointer transition-all duration-300 bg-transparent hover:bg-[#333331] hover:text-white text-[#333331] text-center font-semibold text-sm md:text-base xl:text-lg border-2 border-[#333331]">
+                    No
+                </button>
+                <button class="text-nowrap font-['Roboto'] w-full rounded-full py-3 md:py-3.5 xl:py-4 cursor-pointer transition-all duration-300 hover:bg-transparent bg-[#333331] hover:text-[#333331] text-white text-center font-semibold text-sm md:text-base xl:text-lg border-2 border-[#333331]">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+     </section>
+
+
+
+   
+
+    <!-- ================= Footer ================== -->
+    <footer class="bg-[#EAE0D6]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex flex-wrap gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-5 justify-between pt-32 md:pt-40 lg:pt-48 xl:pt-56 pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+                <div class="max-w-sm flex gap-8 flex-col">
+                    <img src="./assets/images/footer-logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt="">
+                    <p class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+                    </p>
+                    <div class="flex items-baseline-last gap-6 ">
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Facebook.png" alt="Facebook"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Twitter.png" alt="Twitter"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Instagram.png" alt="Instagram"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/LinkedIn.png" alt="LinkedIn"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/YouTube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Product
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Features</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Pricing</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Case studies</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Reviews</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Updates</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Company
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">About</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Contact us</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Careers</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Culture</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Blog</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Support
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Getting started
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Help center
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Server status
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Report a bug
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Chat support
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Contact us</h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Email.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        contact@company.com
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Phone.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        (414) 687 - 5892
+                    </a>
+                    <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Mark.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        794 Mcallister St San Francisco, 94102
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 md:flex-row items-center  md:justify-between pb-2 md:pb-4 lg:pb-6 xl:pb-8">
+                <p class="font-['DM_Sans'] text-[#6F6C90] font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    Copyright © 2025 Darzify
+                </p>
+                <div class="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    <span class="font-['DM_Sans'] text-[#6F6C90] font-normal ">All Rights Reserved</span>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Terms and Conditions</a>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= Scripts ================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        // ==================== font seoul-namsan ===============
+        (function (d) {
+            var config = {
+                kitId: 'pug2vcj',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+
+        // ================ Swiper Js =====================
+
+       //  Reviews swiper
+        var swiper = new Swiper(".reviews-swiper", {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 12,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 12,
+                },
+                1024: {
+                    spaceBetween: 10,
+                },
+                768: {
+                    spaceBetween: 8,
+                },
+                0: {
+                    spaceBetween: 6,
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

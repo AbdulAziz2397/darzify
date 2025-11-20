@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file -->
+    <link href="./tailwind.css" rel="stylesheet">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Jost and Roboto Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Title -->
+    <title>Darzify</title>
+</head>
+
+<body class="bg-[#ECE6DF]">
+    <!--======================== Header =======================-->
+    <header class="bg-[#333331]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="h-16 md:h-18 xl:h-20 2xl:h-24 flex justify-between items-center">
+                <div class=" flex justify-start items-center gap-2.5">
+                    <div>
+                        <span class="uppercase text-[22px] md:text-2xl lg:text-[28px] xl:text-[32px] 2xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
+                    </div>
+                    <div class="flex items-center text-[#EAE0D6] gap-1 md:gap-1.5">
+                        <img src="./assets/icons/location-pin.png" class="size-4 md:size-4.5 lg:size-4 xl:size-5 2xl:size-6"
+                            alt="location-pin">
+                        <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium font-['Jost'] hidden md:block ">Gaur City 2, Noida</span>
+                            <button class="cursor-pointer">
+                                <i class="fa-solid fa-chevron-down text-xs lg:text-sm xl:text-base"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="w-auto lg:w-1/2 flex items-center justify-end gap-2 sm:gap-3 md:gap-4">
+                    <div class="cursor-pointer lg:cursor-text lg:w-full lg:max-w-80 xl:max-w-96 size-6 md:size-8 lg:h-10  xl:h-12 2xl:h-14 flex items-center justify-center border border-[#EAE0D6] rounded-md md:rounded-lg lg:rounded-xl ">
+                        <img src="./assets/icons/magnifying-glass.png" class="size-3 md:size-4 lg:m-3" alt="magnifying-glass" />
+                        <input type="text" placeholder="Search for ‘boutiques’" class="text-xl placeholder:text-[#6E6E6E] text-[#EAE0D6] font-['Roboto'] h-full w-full outline-none border-none hidden lg:block">
+                    </div>
+                    <button class="text-[#333331] bg-[#ECE6DF] cursor-pointer size-6 md:size-8 lg:size-10 xl:size-12 2xl:size-14 rounded-md md:rounded-lg lg:rounded-xl flex justify-center items-center">
+                        <i class="fa-regular fa-user text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"></i>
+                    </button>
+                    <button class="bg-[#333331] cursor-pointer size-8 md:size-10 lg:size-12 xl:size-14 flex justify-center items-center">
+                        <img src="./assets/icons/shopping-bag.png" class="size-5 md:size-6 lg:size-7 xl:size-6 2xl:size-8 object-contain" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= Payment Failed ================== -->
+    <section class="mt-5 md:mt-7 lg:mt-9 xl:mt-12 mb-52 sm:mb-56 md:mb-60 lg:mb-64 xl:mb-72 2xl:mb-80">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex justify-between items-center mb-5 md:mb-6 lg:mb-8 xl:mb-10 2xl:mb-12">
+                <div class="flex items-center">
+                    <button class="font-['Roboto'] cursor-pointer font-medium text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl mr-3 md:mr-5 lg:mr-8 xl:mr-12"><i class="fa-solid fa-chevron-left"></i></button>
+                    <h3 class="font-['Roboto'] font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">Cart</h3>
+                </div>
+                <span class="font-['Jost'] text-[#5D5D5D] font-normal text-sm lg:text-base xl:text-lg ml-auto">Home/ Payment</span>
+            </div>
+            <div class="w-full flex items-center justify-center">
+                <div class="w-full max-w-xl flex flex-col justify-center items-center">
+                    <div class="w-full max-w-48 md:max-w-56 lg:max-w-64 xl:max-w-72 2xl:max-w-80">
+                        <img class="size-full object-contain " src="./assets/images/payment-failed.png" alt="">
+                    </div>
+                    <div class="text-center px-7 md:px-8 xl:px-10 mb-14 md:mb-16 xl:mb-20">
+                        <h2 class="font-['roboto'] font-bold text-2xl md:text-3xl xl:text-4xl mb-2.5">Payment Failed</h2>
+                        <p class="font-['Roboto'] font-normal text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl">Your transaction couldn’t be completed. Please try again or use a different payment method. </p>
+                    </div>
+                    <button class="font-['Roboto'] mt-2.5 sm:mt-3 md:mt-3.5 lg:mt-4 xl:mt-5 w-full text-center py-2.5 md:py-3 lg:py-3.5 xl:py-4  bg-[#333331] cursor-pointer rounded-full text-white font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px]">
+                        Go to Orders
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- ================= Footer ================== -->
+    <footer class="bg-[#EAE0D6]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex flex-wrap gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-5 justify-between pt-32 md:pt-40 lg:pt-48 xl:pt-56 pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+                <div class="max-w-sm flex gap-8 flex-col">
+                    <img src="./assets/images/footer-logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt="">
+                    <p class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+                    </p>
+                    <div class="flex items-baseline-last gap-6 ">
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Facebook.png" alt="Facebook"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Twitter.png" alt="Twitter"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Instagram.png" alt="Instagram"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/LinkedIn.png" alt="LinkedIn"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/YouTube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Product
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Features</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Pricing</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Case studies</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Reviews</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Updates</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Company
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">About</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Contact us</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Careers</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Culture</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Blog</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Support
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Getting started
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Help center
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Server status
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Report a bug
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Chat support
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Contact us</h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Email.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        contact@company.com
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Phone.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        (414) 687 - 5892
+                    </a>
+                    <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Mark.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        794 Mcallister St San Francisco, 94102
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 md:flex-row items-center  md:justify-between pb-2 md:pb-4 lg:pb-6 xl:pb-8">
+                <p class="font-['DM_Sans'] text-[#6F6C90] font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    Copyright © 2025 Darzify
+                </p>
+                <div class="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    <span class="font-['DM_Sans'] text-[#6F6C90] font-normal ">All Rights Reserved</span>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Terms and Conditions</a>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= Scripts ================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        // ==================== font seoul-namsan ===============
+        (function (d) {
+            var config = {
+                kitId: 'pug2vcj',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+
+        // ================ Swiper Js =====================
+
+       //  Reviews swiper
+        var swiper = new Swiper(".reviews-swiper", {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 12,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 12,
+                },
+                1024: {
+                    spaceBetween: 10,
+                },
+                768: {
+                    spaceBetween: 8,
+                },
+                0: {
+                    spaceBetween: 6,
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

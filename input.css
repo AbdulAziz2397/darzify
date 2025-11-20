@@ -76,6 +76,72 @@ div.iti__country-container {
     outline: none;
 }
 
+/* Dropzonejs custom style */
+.dz-preview{
+    width: 100px !important;
+    height: auto !important;
+    position: relative !important;
+    display: inline-block !important;
+    margin: 20px 8px !important;
+    box-sizing: border-box !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 4px rgba(0, 0,
+    0, 0.1) !important;
+    padding: 4px !important;
+}
+.dz-preview .dz-image{
+    width: 100% !important;
+    height: 100px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.dz-preview .dz-success-mark{
+    display: none !important;
+}
+
+.dz-preview .dz-error-mark{
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+    color: rgba(0, 0, 0, 0.473) !important;
+}
+
+.dz-preview .dz-error-mark svg{
+    width: 20px !important;
+    height: 20px !important;
+}
+.dz-preview .dz-error-mark svg g{
+    fill: currentColor !important;
+    stroke-width: 0 !important;
+}
+.dz-details .dz-size{
+    font-size: 12px !important;
+    margin-top: 4px !important;
+    white-space: wrap !important;
+    width: 100% !important;
+}
+.dz-details .dz-filename{
+    font-size: 12px !important;
+    margin-top: 4px !important;
+    white-space: wrap !important;
+    width: 100% !important;
+}
+
+.dz-error-message{
+    font-size: 10px !important;
+    margin-top: 4px !important;
+    color: red !important;
+    white-space: wrap !important;
+    width: 100% !important;
+}
+
+
+
+
+
+
 @media (max-width: 475px) {
     .hero-inner-div .swiper-pagination-bullet {
         width: 25px;
