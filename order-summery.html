@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file -->
+    <link href="./tailwind.css" rel="stylesheet">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Jost and Roboto Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Title -->
+    <title>Darzify</title>
+</head>
+
+<body class="bg-[#ECE6DF]">
+    <!--======================== Header =======================-->
+    <header class="bg-[#333331]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="h-16 md:h-18 xl:h-20 2xl:h-24 flex justify-between items-center">
+                <div class=" flex justify-start items-center gap-2.5">
+                    <div>
+                        <span class="uppercase text-[22px] md:text-2xl lg:text-[28px] xl:text-[32px] 2xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
+                    </div>
+                    <div class="flex items-center text-[#EAE0D6] gap-1 md:gap-1.5">
+                        <img src="./assets/icons/location-pin.png" class="size-4 md:size-4.5 lg:size-4 xl:size-5 2xl:size-6"
+                            alt="location-pin">
+                        <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium font-['Jost'] hidden md:block ">Gaur City 2, Noida</span>
+                            <button class="cursor-pointer">
+                                <i class="fa-solid fa-chevron-down text-xs lg:text-sm xl:text-base"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="w-auto lg:w-1/2 flex items-center justify-end gap-2 sm:gap-3 md:gap-4">
+                    <div class="cursor-pointer lg:cursor-text lg:w-full lg:max-w-80 xl:max-w-96 size-6 md:size-8 lg:h-10  xl:h-12 2xl:h-14 flex items-center justify-center border border-[#EAE0D6] rounded-md md:rounded-lg lg:rounded-xl ">
+                        <img src="./assets/icons/magnifying-glass.png" class="size-3 md:size-4 lg:m-3" alt="magnifying-glass" />
+                        <input type="text" placeholder="Search for ‘boutiques’" class="text-xl placeholder:text-[#6E6E6E] text-[#EAE0D6] font-['Roboto'] h-full w-full outline-none border-none hidden lg:block">
+                    </div>
+                    <button class="text-[#333331] bg-[#ECE6DF] cursor-pointer size-6 md:size-8 lg:size-10 xl:size-12 2xl:size-14 rounded-md md:rounded-lg lg:rounded-xl flex justify-center items-center">
+                        <i class="fa-regular fa-user text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"></i>
+                    </button>
+                    <button class="bg-[#333331] cursor-pointer size-8 md:size-10 lg:size-12 xl:size-14 flex justify-center items-center">
+                        <img src="./assets/icons/shopping-bag.png" class="size-5 md:size-6 lg:size-7 xl:size-6 2xl:size-8 object-contain" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= Order Summery ================== -->
+    <section class="mt-5 md:mt-7 lg:mt-9 xl:mt-12 mb-52 sm:mb-56 md:mb-60 lg:mb-64 xl:mb-72 2xl:mb-80">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex justify-between items-center mb-5 md:mb-6 lg:mb-8 xl:mb-10 2xl:mb-12">
+                <div class="flex items-center">
+                    <button class="font-['Roboto'] cursor-pointer font-medium text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl mr-3 md:mr-5 lg:mr-8 xl:mr-12"><i class="fa-solid fa-chevron-left"></i></button>
+                    <h3 class="font-['Roboto'] font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">Payment</h3>
+                </div>
+                <span class="font-['Jost'] text-[#5D5D5D] font-normal text-sm lg:text-base xl:text-lg ml-auto">Home/ Payment</span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14">
+                <div class="w-full sm:w-3/5">
+                    <div class="mb-3.5 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-7 2xl:mb-9">
+                        <div class="text-sm md:text-base xl:text-lg font-['Roboto'] font-semibold text-black mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3 xl:mb-3.5 2xl:mb-4"><p>Drop To</p></div>
+                        <div class="bg-[#333331] p-4 md:p-6 rounded-lg md:rounded-xl lg:rounded-2xl flex flex-row justify-between gap-3 md:gap-5">
+                            <div class="flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-5">
+                                <div class="min-w-max">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 md:size-4 xl:size-5" viewBox="0 0 18 18" fill="currentColor">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.652 1.09622L17.3408 6.78572C17.5504 6.99406 17.7167 7.24194 17.8298 7.51501C17.943 7.78807 18.0009 8.08088 18 8.37647V15.7392C18 16.336 17.763 16.9083 17.341 17.3302C16.919 17.7522 16.3467 17.9892 15.75 17.9892H11.25L11.25 16.4892V13.5387C11.25 12.942 11.013 12.3697 10.591 11.9477C10.169 11.5258 9.59675 11.2887 9.00001 11.2887C8.40327 11.2887 7.83098 11.5258 7.40902 11.9477C6.98706 12.3697 6.75001 12.942 6.75001 13.5387V16.4892V17.9892H2.25001C1.65327 17.9892 1.08098 17.7522 0.659019 17.3302C0.237062 16.9083 9.05961e-06 16.336 9.05961e-06 15.7392V8.37647C-0.0008328 8.08088 0.0570054 7.78807 0.170171 7.51501C0.283336 7.24194 0.449578 6.99406 0.659259 6.78572L6.34801 1.09622C7.05208 0.394211 8.00576 0 9.00001 0C9.99426 0 10.9479 0.394211 11.652 1.09622ZM16.2803 16.2696C16.421 16.1289 16.5 15.9381 16.5 15.7392V8.37647C16.4987 8.17848 16.4198 7.9889 16.2803 7.84847L10.5915 2.15897C10.1687 1.73817 9.59651 1.50193 9.00001 1.50193C8.40351 1.50193 7.83129 1.73817 7.40851 2.15897L1.71976 7.84622C1.57965 7.98721 1.5007 8.1777 1.50001 8.37647V15.7392C1.50001 15.9381 1.57903 16.1289 1.71968 16.2696C1.86033 16.4102 2.0511 16.4892 2.25001 16.4892H5.25001V13.5387C5.25001 12.5442 5.6451 11.5903 6.34836 10.8871C7.05162 10.1838 8.00545 9.78872 9.00001 9.78872C9.99457 9.78872 10.9484 10.1838 11.6517 10.8871C12.3549 11.5903 12.75 12.5442 12.75 13.5387V16.4892H15.75C15.9489 16.4892 16.1397 16.4102 16.2803 16.2696Z" fill="#EFEFEF"/>
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col gap-1.5 md:gap-2 xl:gap-2.5">
+                                    <h4 class="font-['Roboto'] text-white font-medium text-xs md:text-sm lg:text-base xl:text-lg capitalize">Shop</h4>
+                                    <h4 class="font-['Roboto'] text-white font-medium text-xs md:text-sm lg:text-base xl:text-lg capitalize">Quality Tailor</h4>
+                                    <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base xl:text-lg capitalize">Shop No 2, Ground Floor, Galleria Market, Gaur City 2, 201009</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <div class="text-sm md:text-base xl:text-lg font-['Roboto'] font-semibold text-black mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3 xl:mb-3.5 2xl:mb-4"><h4>Delivery To</h4></div>
+                        <div class="flex flex-col gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-5 px-3 md:px-3.5 lg:px-4 xl:px-5 2xl:px-6 py-2.5 md:py-3 lg:py-3.5 xl:py-4 2xl:py-5 bg-[#EAE0D6] rounded-2xl mb-3.5 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-7 2xl:mb-9">
+                            <div class="flex items-center justify-between ">
+                                <span class="font-['Roboto'] text-[#333331] font-medium text-xs md:text-sm xl:text-base 2xl:text-lg flex items-baseline gap-1.5 lg:gap-2.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-3.5 md:size-4 xl:size-5" viewBox="0 0 18 18">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.652 1.09622L17.3408 6.78572C17.5504 6.99406 17.7167 7.24194 17.8298 7.51501C17.943 7.78807 18.0009 8.08088 18 8.37647V15.7392C18 16.336 17.763 16.9083 17.341 17.3302C16.919 17.7522 16.3467 17.9892 15.75 17.9892H11.25L11.25 16.4892V13.5387C11.25 12.942 11.013 12.3697 10.591 11.9477C10.169 11.5258 9.59675 11.2887 9.00001 11.2887C8.40327 11.2887 7.83098 11.5258 7.40902 11.9477C6.98706 12.3697 6.75001 12.942 6.75001 13.5387V16.4892V17.9892H2.25001C1.65327 17.9892 1.08098 17.7522 0.659019 17.3302C0.237062 16.9083 9.05961e-06 16.336 9.05961e-06 15.7392V8.37647C-0.0008328 8.08088 0.0570054 7.78807 0.170171 7.51501C0.283336 7.24194 0.449578 6.99406 0.659259 6.78572L6.34801 1.09622C7.05208 0.394211 8.00576 0 9.00001 0C9.99426 0 10.9479 0.394211 11.652 1.09622ZM16.2803 16.2696C16.421 16.1289 16.5 15.9381 16.5 15.7392V8.37647C16.4987 8.17848 16.4198 7.9889 16.2803 7.84847L10.5915 2.15897C10.1687 1.73817 9.59651 1.50193 9.00001 1.50193C8.40351 1.50193 7.83129 1.73817 7.40851 2.15897L1.71976 7.84622C1.57965 7.98721 1.5007 8.1777 1.50001 8.37647V15.7392C1.50001 15.9381 1.57903 16.1289 1.71968 16.2696C1.86033 16.4102 2.0511 16.4892 2.25001 16.4892H5.25001V13.5387C5.25001 12.5442 5.6451 11.5903 6.34836 10.8871C7.05162 10.1838 8.00545 9.78872 9.00001 9.78872C9.99457 9.78872 10.9484 10.1838 11.6517 10.8871C12.3549 11.5903 12.75 12.5442 12.75 13.5387V16.4892H15.75C15.9489 16.4892 16.1397 16.4102 16.2803 16.2696Z" fill="currentColor"/>
+                                    </svg>
+                                    <span>Home</span>
+                                </span>
+                                <button class="font-['Roboto'] text-[#D32F23] font-semibold text-xs md:text-sm xl:text-base 2xl:text-lg cursor-pointer">
+                                    <span>Change Address ></span>
+                                </button>
+                            </div>
+                            <div class="flex flex-col gap-1.5 ml-4 md:ml-5 lg:ml-6 2xl:ml-7">
+                                <span class="font-['Roboto'] text-[#333331] font-medium text-xs md:text-sm xl:text-base 2xl:text-lg">
+                                    Vasu Pratap Chauhan
+                                </span>
+                                <p class="font-['Roboto'] text-[#333331] font-normal text-xs md:text-sm xl:text-base">
+                                    901, Tower A , 12th Avenue, Gaur City 2, Gautam Buddha Nagar - 201305
+                                </p>
+                                <span class="font-['Roboto'] text-[#333331] font-normal text-xs md:text-sm xl:text-basenormal">
+                                    76565424242
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-2 border-[#6E6E6E4D] rounded-2xl py-2 md:py-3 lg:py-4 xl:py-5 2xl:py-6 px-5 md:px-6 lg:px-7 xl:px-8 2xl:px-9 mb-4 sm:mb-5 md:mb-6 lg:mb-7 xl:mb-8 2xl:mb-9">
+                        <div class="flex justify-between">
+                            <div class="font-['Roboto'] font-normal text-xs md:text-sm xl:text-base">
+                                <span class="font-semibold">DROP: </span>
+                                <span>Today at 5 PM</span>
+                            </div>
+                            <div class="font-['Roboto'] font-normal text-xs md:text-sm xl:text-base">
+                                <span class="font-semibold">DELIVERY BY: </span>
+                                <span>Mon, 22 Sep</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center border cursor-pointer border-[#6E6E6E4D] py-3 md:py-4 xl:py-5 px-3.5 md:px-4 lg:px-5 xl:px-6 overflow-hidden rounded-2xl  mb-3.5 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8 2xl:mb-10 "> 
+                        <div class="flex items-center">
+                            <div class="size-20 md:size-24 xl:size-28 rounded-lg overflow-hidden">
+                                <img class="size-full object-contain" src="./assets/images/shopping.png" alt="">
+                            </div>
+                            <div class="font-['Roboto'] ml-1.5 md:ml-2 lg:ml-2.5 xl:ml-3 2xl:ml-3.5 flex flex-col justify-evenly gap-1 sm:gap-0">
+                                <h3 class="font-medium text-sm md:text-base xl:text-lg">Traditional High Neck Blouse x1</h3>
+                                <span class="font-normal text-xs md:text-sm xl:text-base text-[#6E6E6E] ">Blouse</span>
+                                <div class="font-normal text-xs md:text-sm xl:text-base text-[#6E6E6E] "><span>Tailor: </span> <span>Quality Tailor</span></div>
+                            </div>
+                        </div>
+                        <button class=" text-base md:text-lg xl:text-xl ">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full sm:max-w-2/5">
+                    <div class="mb-3.5 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8 2xl:mb-10 ">
+                        <div class="mb-3 md:mb-3.5 xl:mb-4"><h4 class="font-['Roboto'] text-black text-xs md:text-sm xl:text-base 2xl:text-lg font-semibold">Price Details</h4></div>
+                        <div class="w-full flex flex-col text-[#333331] font-['Roboto'] text-sm md:text-base xl:text-lg bg-[#EFEFEF] rounded-[20px] gap-3 md:gap-4 xl:gap-5 p-2.5 sm:p-3 md:p-3.5 lg:p-4 xl:p-5 2xl:p-6">
+                            <div class="flex justify-between items-center ">
+                                <span class="font-normal">Total MRP</span>
+                                <span class="font-medium">₹999</span>
+                            </div>
+                            <div class="flex justify-between items-center ">
+                                <span class="font-normal">Discount</span>
+                                <span class="font-medium text-[#5906F3]">₹99</span>
+                            </div>
+                            <div class="flex justify-between items-center ">
+                                <span class="font-normal">Delivery Fee</span>
+                                <span class="font-medium">₹0</span>
+                            </div>
+                            <div class="bg-[#6E6E6E] w-full h-0.5"></div>
+                            <div class="flex justify-between items-center text-lg md:text-xl xl:text-[22px]">
+                                <h3 class="font-semibold">Total Amount</h3>
+                                <span class="font-medium">₹900</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-3.5 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8 2xl:mb-10 ">
+                        <div class="flex items-center gap-2 md:gap-2.5 xl:gap-3">                        
+                            <svg class="size-5 md:size-7 xl:size-9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 36" fill="currentColor">
+                                <rect width="36" height="36" fill="url(#pattern0_1033_7689)"/>
+                                <defs>
+                                    <pattern id="pattern0_1033_7689" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_1033_7689" transform="scale(0.00195312)"/>
+                                    </pattern>
+                                    <image id="image0_1033_7689" width="512" height="512" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                                </defs>
+                            </svg>
+                            <span class="text-black font-['Roboto'] font-medium text-sm md:text-base xl:text-lg">
+                                Cash on delivery (Cash/UPI)
+                            </span>
+                        </div>
+                        <button class="text-[#D32F23] cursor-pointer font-['Roboto'] font-semibold text-xs md:text-sm xl:text-base">
+                            Change
+                        </button>
+                    </div>
+                    <div>
+                        <button class="font-['Roboto'] mt-2.5 sm:mt-3 md:mt-3.5 lg:mt-4 xl:mt-5 w-full text-center py-2.5 md:py-3 lg:py-3.5 xl:py-4  bg-[#333331] cursor-pointer rounded-full text-white font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px]">
+                            Confirm & Place Order <span>₹900</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- ================= Footer ================== -->
+    <footer class="bg-[#EAE0D6]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex flex-wrap gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-5 justify-between pt-32 md:pt-40 lg:pt-48 xl:pt-56 pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+                <div class="max-w-sm flex gap-8 flex-col">
+                    <img src="./assets/images/footer-logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt="">
+                    <p class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+                    </p>
+                    <div class="flex items-baseline-last gap-6 ">
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Facebook.png" alt="Facebook"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Twitter.png" alt="Twitter"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Instagram.png" alt="Instagram"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/LinkedIn.png" alt="LinkedIn"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/YouTube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Product
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Features</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Pricing</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Case studies</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Reviews</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Updates</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Company
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">About</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Contact us</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Careers</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Culture</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Blog</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Support
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Getting started
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Help center
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Server status
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Report a bug
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Chat support
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Contact us</h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Email.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        contact@company.com
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Phone.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        (414) 687 - 5892
+                    </a>
+                    <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Mark.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        794 Mcallister St San Francisco, 94102
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 md:flex-row items-center  md:justify-between pb-2 md:pb-4 lg:pb-6 xl:pb-8">
+                <p class="font-['DM_Sans'] text-[#6F6C90] font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    Copyright © 2025 Darzify
+                </p>
+                <div class="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    <span class="font-['DM_Sans'] text-[#6F6C90] font-normal ">All Rights Reserved</span>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Terms and Conditions</a>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= Scripts ================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        // ==================== font seoul-namsan ===============
+        (function (d) {
+            var config = {
+                kitId: 'pug2vcj',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+
+        // ================ Swiper Js =====================
+
+       //  Reviews swiper
+        var swiper = new Swiper(".reviews-swiper", {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 12,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 12,
+                },
+                1024: {
+                    spaceBetween: 10,
+                },
+                768: {
+                    spaceBetween: 8,
+                },
+                0: {
+                    spaceBetween: 6,
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
