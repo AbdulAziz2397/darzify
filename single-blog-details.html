@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file -->
+    <link href="./tailwind.css" rel="stylesheet">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Jost and Roboto Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Title -->
+    <title>Darzify</title>
+</head>
+
+<body class="bg-[#ECE6DF]">
+    <!--======================== Header =======================-->
+    <header class="bg-[#333331]">
+        <div class="relative w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="h-16 md:h-18 xl:h-20 2xl:h-24 flex justify-between items-center">
+                <div class=" flex justify-start items-center gap-2.5">
+                    <a class="cursor-pointer" href="./index.html">
+                        <span class="uppercase text-[22px] md:text-2xl lg:text-[28px] xl:text-[32px] 2xl:text-4xl text-[#EAE0D6] font-['seoul-namsan'] tracking-[32%]">darzify</span>
+                    </a>
+                    <a href="./address.html" class="flex items-center text-[#EAE0D6] gap-1 md:gap-1.5 cursor-pointer">
+                        <img src="./assets/icons/location-pin.png" class="size-4 md:size-4.5 lg:size-4 xl:size-5 2xl:size-6"
+                            alt="location-pin">
+                        <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium font-['Jost'] hidden md:block ">Gaur City 2, Noida</span>
+                            <div class="cursor-pointer">
+                                <i class="fa-solid fa-chevron-down text-xs lg:text-sm xl:text-base"></i>
+                            </div>
+                    </a>
+                </div>
+                <div class="w-auto lg:w-1/2 flex items-center justify-end gap-2 sm:gap-3 md:gap-4">
+                    <div class="cursor-pointer lg:cursor-text lg:w-full lg:max-w-80 xl:max-w-96 size-6 md:size-8 lg:h-10  xl:h-12 2xl:h-14 flex items-center justify-center border border-[#EAE0D6] rounded-md md:rounded-lg lg:rounded-xl ">
+                        <img src="./assets/icons/magnifying-glass.png" class="size-3 md:size-4 lg:m-3" alt="magnifying-glass" />
+                        <input type="text" placeholder="Search for ‘boutiques’" class="text-xl placeholder:text-[#6E6E6E] text-[#EAE0D6] font-['Roboto'] h-full w-full outline-none border-none hidden lg:block">
+                    </div>
+                    <div class="relative group ">
+                        <div class="h-6 md:h-8 lg:h-10 xl:h-12 2xl:h-14 absolute w-16 -left-5 hidden group-hover:block"></div>
+                        <button id="user-button" class="text-[#333331] bg-[#ECE6DF] cursor-pointer size-6 md:size-8 lg:size-10 xl:size-12 2xl:size-14 rounded-md md:rounded-lg lg:rounded-xl flex justify-center items-center">
+                            <i class="fa-regular fa-user text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"></i>
+                        </button>
+                        <!--======================== Slide Menu =======================-->
+                        <div id="user-slide-menu" class="opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-10 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto absolute z-40 right-0 pt-4">
+                            <div class="bg-white w-full min-w-md p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-9 rounded-3xl">
+                                <div>
+                                    <h3 class="font-['Roboto'] font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px] mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3 xl:mb-3.5 2xl:mb-4">Hey, User!</h3>
+                                    <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs sm:text-sm lg:text-base xl:text-lg capitalize">Please Login or Signup to Manage Orders & Access Accounts.</span>
+                                </div>
+                                <div class="mt-2 sm:mt-2.5 md:mt-3 lg:mt-3.5 xl:mt-4 2xl:mt-5">
+                                    <button class="border-2 hover:text-[#333331] text-[#EFEFEF] hover:border-[#333331] border-[#ECE6DF] transition-all duration-300 cursor-pointer rounded-xl h-12 xl:h-14 2xl:h-16 px-5 xl:px-6 2xl:px-7 font-['Roboto'] bg-[#333331] hover:bg-transparent font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px]">
+                                        Login/Signup
+                                    </button>
+                                </div>
+                                <div class="w-full h-0.5 bg-[#E5E5E5] my-3 md:my-3.5 lg:my-4 xl:my-5 2xl:my-6"></div>
+                                <div class="flex justify-between items-center gap-4">
+                                    <div>
+                                        <h3 class="font-['Roboto'] text-[#404040] font-medium text-sm md:text-base xl:text-lg">Orders</h3>
+                                        <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs lg:text-sm">Check your order status (track, return, cancel etc)</span>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                            <g clip-path="url(#clip0_947_1355)">
+                                                <path d="M7 24C8.10457 24 9 23.1046 9 22C9 20.8954 8.10457 20 7 20C5.89543 20 5 20.8954 5 22C5 23.1046 5.89543 24 7 24Z" fill="#333331"/>
+                                                <path d="M17 24C18.1046 24 19 23.1046 19 22C19 20.8954 18.1046 20 17 20C15.8954 20 15 20.8954 15 22C15 23.1046 15.8954 24 17 24Z" fill="#333331"/>
+                                                <path d="M23 3H21V1C21 0.734784 20.8946 0.48043 20.7071 0.292893C20.5196 0.105357 20.2652 0 20 0C19.7348 0 19.4804 0.105357 19.2929 0.292893C19.1054 0.48043 19 0.734784 19 1V3H17C16.7348 3 16.4804 3.10536 16.2929 3.29289C16.1054 3.48043 16 3.73478 16 4C16 4.26522 16.1054 4.51957 16.2929 4.70711C16.4804 4.89464 16.7348 5 17 5H19V7C19 7.26522 19.1054 7.51957 19.2929 7.70711C19.4804 7.89464 19.7348 8 20 8C20.2652 8 20.5196 7.89464 20.7071 7.70711C20.8946 7.51957 21 7.26522 21 7V5H23C23.2652 5 23.5196 4.89464 23.7071 4.70711C23.8946 4.51957 24 4.26522 24 4C24 3.73478 23.8946 3.48043 23.7071 3.29289C23.5196 3.10536 23.2652 3 23 3Z" fill="#333331"/>
+                                                <path d="M21.771 9.726C21.6417 9.70181 21.5089 9.70352 21.3803 9.73103C21.2516 9.75854 21.1297 9.81132 21.0216 9.88629C20.9136 9.96126 20.8214 10.0569 20.7506 10.1678C20.6798 10.2786 20.6316 10.4024 20.609 10.532C20.4843 11.2242 20.1203 11.8505 19.5808 12.3016C19.0412 12.7527 18.3603 12.9999 17.657 13H5.418L4.478 5H13C13.2652 5 13.5196 4.89464 13.7071 4.70711C13.8946 4.51957 14 4.26522 14 4C14 3.73478 13.8946 3.48043 13.7071 3.29289C13.5196 3.10536 13.2652 3 13 3H4.242L4.2 2.648C4.11382 1.9186 3.76306 1.24615 3.21419 0.758104C2.66532 0.270054 1.95647 0.000312836 1.222 0L1 0C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H1.222C1.46693 2.00003 1.70334 2.08996 1.88637 2.25272C2.06941 2.41547 2.18634 2.63975 2.215 2.883L3.591 14.583C3.73385 15.7998 4.31848 16.9218 5.23391 17.736C6.14934 18.5502 7.33185 19 8.557 19H19C19.2652 19 19.5196 18.8946 19.7071 18.7071C19.8946 18.5196 20 18.2652 20 18C20 17.7348 19.8946 17.4804 19.7071 17.2929C19.5196 17.1054 19.2652 17 19 17H8.557C7.93652 17.0001 7.33127 16.8078 6.82461 16.4497C6.31796 16.0915 5.93483 15.585 5.728 15H17.657C18.8291 15.0001 19.9641 14.5884 20.8635 13.8368C21.763 13.0852 22.3698 12.0415 22.578 10.888C22.6014 10.7587 22.599 10.6261 22.5711 10.4977C22.5432 10.3693 22.4902 10.2477 22.4153 10.1398C22.3403 10.0319 22.2449 9.93978 22.1343 9.86878C22.0238 9.79778 21.9003 9.74926 21.771 9.726Z" fill="#333331"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_947_1355">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-full h-0.5 bg-[#EFEFEF] my-2.5 md:my-3 lg:my-3.5 xl:my-4 2xl:my-5"></div>
+                                <div class="flex justify-between items-center gap-4">
+                                    <div>
+                                        <h3 class="font-['Roboto'] text-[#404040] font-medium text-sm md:text-base xl:text-lg">Wishlist</h3>
+                                        <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs lg:text-sm">Buy items saved in Wishlist</span>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23" fill="currentColor" class="size-6">
+                                            <path d="M17.5009 0C16.3749 0.0175149 15.2734 0.331853 14.3077 0.911271C13.342 1.49069 12.5463 2.31467 12.0009 3.3C11.4556 2.31467 10.6599 1.49069 9.69417 0.911271C8.72848 0.331853 7.62698 0.0175149 6.50094 0C4.70588 0.0779907 3.01464 0.863254 1.79672 2.18423C0.578794 3.50521 -0.0668157 5.25453 0.000934853 7.05C0.000934853 13.825 10.9569 21.65 11.4229 21.982L12.0009 22.391L12.5789 21.982C13.0449 21.652 24.0009 13.825 24.0009 7.05C24.0687 5.25453 23.4231 3.50521 22.2052 2.18423C20.9872 0.863254 19.296 0.0779907 17.5009 0ZM12.0009 19.929C8.74793 17.499 2.00093 11.529 2.00093 7.05C1.93258 5.78472 2.3673 4.54373 3.2103 3.5977C4.0533 2.65167 5.23617 2.07735 6.50094 2C7.7657 2.07735 8.94857 2.65167 9.79157 3.5977C10.6346 4.54373 11.0693 5.78472 11.0009 7.05H13.0009C12.9326 5.78472 13.3673 4.54373 14.2103 3.5977C15.0533 2.65167 16.2362 2.07735 17.5009 2C18.7657 2.07735 19.9486 2.65167 20.7916 3.5977C21.6346 4.54373 22.0693 5.78472 22.0009 7.05C22.0009 11.531 15.2539 17.499 12.0009 19.929Z" fill="#333331"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-full h-0.5 bg-[#EFEFEF] my-2.5 md:my-3 lg:my-3.5 xl:my-4 2xl:my-5"></div>
+                                <div class="flex justify-between items-center gap-4">
+                                    <div>
+                                        <h3 class="font-['Roboto'] text-[#404040] font-medium text-sm md:text-base xl:text-lg">Address</h3>
+                                        <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs lg:text-sm">Manage your saved addresses</span>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6">
+                                            <g clip-path="url(#clip0_947_1377)">
+                                                <path d="M12 6C11.2089 6 10.4355 6.2346 9.77772 6.67412C9.11993 7.11365 8.60723 7.73836 8.30448 8.46927C8.00173 9.20017 7.92252 10.0044 8.07686 10.7804C8.2312 11.5563 8.61216 12.269 9.17157 12.8284C9.73098 13.3878 10.4437 13.7688 11.2196 13.9231C11.9956 14.0775 12.7998 13.9983 13.5307 13.6955C14.2616 13.3928 14.8864 12.8801 15.3259 12.2223C15.7654 11.5645 16 10.7911 16 10C16 8.93913 15.5786 7.92172 14.8284 7.17157C14.0783 6.42143 13.0609 6 12 6ZM12 12C11.6044 12 11.2178 11.8827 10.8889 11.6629C10.56 11.4432 10.3036 11.1308 10.1522 10.7654C10.0009 10.3999 9.96126 9.99778 10.0384 9.60982C10.1156 9.22186 10.3061 8.86549 10.5858 8.58579C10.8655 8.30608 11.2219 8.1156 11.6098 8.03843C11.9978 7.96126 12.3999 8.00087 12.7654 8.15224C13.1308 8.30362 13.4432 8.55996 13.6629 8.88886C13.8827 9.21776 14 9.60444 14 10C14 10.5304 13.7893 11.0391 13.4142 11.4142C13.0391 11.7893 12.5304 12 12 12Z" fill="#333331"/>
+                                                <path d="M12.0003 24C11.1583 24.0043 10.3274 23.8068 9.57738 23.424C8.82733 23.0413 8.17991 22.4844 7.68931 21.8C3.87831 16.543 1.94531 12.591 1.94531 10.053C1.94531 7.38624 3.00468 4.82871 4.89035 2.94303C6.77603 1.05735 9.33356 -0.00201416 12.0003 -0.00201416C14.6671 -0.00201416 17.2246 1.05735 19.1103 2.94303C20.9959 4.82871 22.0553 7.38624 22.0553 10.053C22.0553 12.591 20.1223 16.543 16.3113 21.8C15.8207 22.4844 15.1733 23.0413 14.4232 23.424C13.6732 23.8068 12.8424 24.0043 12.0003 24ZM12.0003 2.18099C9.91273 2.18337 7.91133 3.01371 6.43518 4.48986C4.95904 5.966 4.12869 7.9674 4.12631 10.055C4.12631 12.065 6.01931 15.782 9.45531 20.521C9.74701 20.9228 10.1297 21.2498 10.572 21.4753C11.0144 21.7007 11.5038 21.8183 12.0003 21.8183C12.4968 21.8183 12.9863 21.7007 13.4286 21.4753C13.8709 21.2498 14.2536 20.9228 14.5453 20.521C17.9813 15.782 19.8743 12.065 19.8743 10.055C19.8719 7.9674 19.0416 5.966 17.5654 4.48986C16.0893 3.01371 14.0879 2.18337 12.0003 2.18099Z" fill="#333331"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_947_1377">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-full h-0.5 bg-[#EFEFEF] my-2.5 md:my-3 lg:my-3.5 xl:my-4 2xl:my-5"></div>
+                                <div class="flex justify-between items-center gap-4">
+                                    <div>
+                                        <h3 class="font-['Roboto'] text-[#404040] font-medium text-sm md:text-base xl:text-lg">Help Center</h3>
+                                        <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs lg:text-sm">FAQs, Customer Support</span>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23" fill="currentColor" class="size-6">
+                                            <g clip-path="url(#clip0_947_1387)">
+                                                <path d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C23.9966 8.81846 22.7312 5.76821 20.4815 3.51852C18.2318 1.26883 15.1815 0.00344108 12 0ZM12 22C10.0222 22 8.08879 21.4135 6.4443 20.3147C4.79981 19.2159 3.51809 17.6541 2.76121 15.8268C2.00433 13.9996 1.8063 11.9889 2.19215 10.0491C2.578 8.10929 3.53041 6.32746 4.92894 4.92893C6.32746 3.53041 8.10929 2.578 10.0491 2.19215C11.9889 1.8063 13.9996 2.00433 15.8268 2.7612C17.6541 3.51808 19.2159 4.79981 20.3147 6.4443C21.4135 8.08879 22 10.0222 22 12C21.9971 14.6513 20.9426 17.1931 19.0679 19.0679C17.1931 20.9426 14.6513 21.9971 12 22Z" fill="#333331"/>
+                                                <path d="M12 10H11C10.7348 10 10.4804 10.1054 10.2929 10.2929C10.1054 10.4804 10 10.7348 10 11C10 11.2652 10.1054 11.5196 10.2929 11.7071C10.4804 11.8946 10.7348 12 11 12H12V18C12 18.2652 12.1054 18.5196 12.2929 18.7071C12.4804 18.8946 12.7348 19 13 19C13.2652 19 13.5196 18.8946 13.7071 18.7071C13.8946 18.5196 14 18.2652 14 18V12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10Z" fill="#333331"/>
+                                                <path d="M12 8C12.8284 8 13.5 7.32843 13.5 6.5C13.5 5.67157 12.8284 5 12 5C11.1716 5 10.5 5.67157 10.5 6.5C10.5 7.32843 11.1716 8 12 8Z" fill="#333331"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_947_1387">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./cart.html" class="bg-[#333331] cursor-pointer size-8 md:size-10 lg:size-12 xl:size-14 flex justify-center items-center">
+                        <img src="./assets/icons/shopping-bag.png" class="size-5 md:size-6 lg:size-7 xl:size-6 2xl:size-8 object-contain" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= Single Blog Details ================== -->
+    <section class="my-10 sm:my-12 md:my-14 lg:my-16 xl:my-20 2xl:my-24">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex justify-between items-center mb-5 md:mb-6 lg:mb-8 xl:mb-10 2xl:mb-12">
+                <div class="flex items-center">
+                    <h3 class="font-['Roboto'] font-medium text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">Blog</h3>
+                </div>
+            </div>
+            <div class="sm:grid-cols-3 gap-8 sm:gap-9 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16 mb-6 sm:mb-8 md:mb=10 lg:mb-12 xl:mb-14 2xl:mb-16">
+                <a href="./single-blog-details.html" class="w-full">
+                    <div class="w-full h-[50vmin] rounded-2xl overflow-hidden mb-3 md:mb-4 xl:mb-6"><img class="size-full object-cover" src="./assets/images/blog-img.png" alt=""></div>
+                    <div class="font-['Roboto'] font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px]"><span>Perfect Men’s Tailoring Measurements: A Complete Guide for Shirts & Pants</span></div>
+                    <div class="font-['Roboto'] text-[#00000080] font-medium text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl mt-2 md:mt-2.5 xl:mt-3"><span>Posted on 25 Sep 2025</span></div>
+                </a>
+            </div>
+
+            <article class="prose prose-neutral max-w-none prose-p:my-2 prose-h2:mb-5 prose-h2:mt-8 prose-h3:mb-1 prose-h3:mt-5 prose-li:my-1 prose-ul:list-disc prose-ul:marker:text-black font-['Roboto']">
+                <p>
+                    When it comes to men’s clothing, the right measurements can completely transform the fit,
+                    comfort, and overall look of any outfit. Whether you’re getting a shirt or a pant stitched,
+                    accurate measurements ensure that the final garment feels natural and perfectly tailored
+                    to your body. In this guide, we break down all the essential measurements every man should
+                    know before visiting a tailor or using an online stitching service like Darzify.
+                </p>
+
+                <h2>Why Accurate Measurements Matter</h2>
+
+                <p>
+                    A well-fitted outfit not only looks better, but it boosts confidence. Wrong measurements often lead to:
+                </p>
+
+                <ul>
+                    <li>Tight shoulders</li>
+                    <li>Loose waist</li>
+                    <li>Short sleeves</li>
+                    <li>Baggy thighs</li>
+                    <li>Uneven hems</li>
+                </ul>
+
+                <p>
+                    Small errors can completely ruin the look, which is why understanding your measurements is important.
+                </p>
+
+                <h2>🧥 Shirt Measurements</h2>
+
+                <h3>1. Chest</h3>
+                <p>
+                    Measured around the fullest part of the chest. A proper chest measurement ensures the shirt
+                    is neither too tight nor too loose.
+                </p>
+
+                <h3>2. Waist</h3>
+                <p>
+                    Taken around the natural waistline. This prevents unwanted bulging or folding near the buttons.
+                </p>
+
+                <h3>3. Hip</h3>
+                <p>
+                    Important for long shirts or formals. Ensures the shirt sits well around the lower body.
+                </p>
+
+                <h3>4. Shoulder Width</h3>
+                <p>
+                    From one shoulder point to the other. This is key for correct posture and fitting of the shirt.
+                </p>
+
+                <h3>5. Shirt Length</h3>
+                <p>
+                    From shoulder to the desired length. This decides how long the shirt will be.
+                </p>
+
+                <h3>6. Sleeve Length</h3>
+                <p>
+                    Measured from shoulder to wrist for full sleeves, and from shoulder to mid-arm for half sleeves.
+                </p>
+
+                <h3>7. Armhole</h3>
+                <p>
+                    Ensures comfortable movement without tightness.
+                </p>
+
+                <h3>8. Bicep</h3>
+                <p>
+                    Measured around the upper arm for perfect sleeve fitting.
+                </p>
+
+                <h3>9. Wrist / Cuff</h3>
+                <p>
+                    For proper cuff size that’s neither loose nor tight.
+                </p>
+
+                <h3>10. Neck / Collar</h3>
+                <p>
+                    Ensures the collar sits properly without choking or gaping.
+                </p>
+            </article>
+        </div>
+    </section>
+
+        <!-- ================= Blogs ================== -->
+    <section class="mt-5 md:mt-7 lg:mt-9 xl:mt-12 mb-52 sm:mb-56 md:mb-60 lg:mb-64 xl:mb-72 2xl:mb-80">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="my-6 sm:my-7 md:my-8 lg:my-9 xl:my-10 2xl:my-12"><h2 class="font-['Roboto'] text-start font-medium text-[#00000] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">More Like This</h2></div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-9 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
+                <a href="./single-blog-details.html" class="w-full">
+                    <div class="w-full rounded-2xl overflow-hidden mb-3 md:mb-4 xl:mb-6"><img class="size-full object-cover" src="./assets/images/blog-img.png" alt=""></div>
+                    <div class="font-['Roboto'] font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px]"><span>Perfect Men’s Tailoring Measurements: A Complete Guide for Shirts & Pants</span></div>
+                    <div class="font-['Roboto'] text-[#00000080] font-medium text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl mt-2 md:mt-2.5 xl:mt-3"><span>Posted on 25 Sep 2025</span></div>
+                </a>
+                <a href="./single-blog-details.html" class="w-full">
+                    <div class="w-full rounded-2xl overflow-hidden mb-3 md:mb-4 xl:mb-6"><img class="size-full object-cover" src="./assets/images/blog-img.png" alt=""></div>
+                    <div class="font-['Roboto'] font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px]"><span>Perfect Men’s Tailoring Measurements: A Complete Guide for Shirts & Pants</span></div>
+                    <div class="font-['Roboto'] text-[#00000080] font-medium text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl mt-2 md:mt-2.5 xl:mt-3"><span>Posted on 25 Sep 2025</span></div>
+                </a>
+                <a href="./single-blog-details.html" class="w-full">
+                    <div class="w-full rounded-2xl overflow-hidden mb-3 md:mb-4 xl:mb-6"><img class="size-full object-cover" src="./assets/images/blog-img.png" alt=""></div>
+                    <div class="font-['Roboto'] font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px]"><span>Perfect Men’s Tailoring Measurements: A Complete Guide for Shirts & Pants</span></div>
+                    <div class="font-['Roboto'] text-[#00000080] font-medium text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl mt-2 md:mt-2.5 xl:mt-3"><span>Posted on 25 Sep 2025</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- ================= Footer ================== -->
+    <footer class="bg-[#EAE0D6]">
+        <div class="w-full max-w-10xl mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+            <div class="flex flex-wrap gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-5 justify-between pt-32 md:pt-40 lg:pt-48 xl:pt-56 pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+                <div class="max-w-sm flex gap-8 flex-col">
+                    <img src="./assets/images/footer-logo.png" class="w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36" alt="">
+                    <p class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+                    </p>
+                    <div class="flex items-baseline-last gap-6 ">
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Facebook.png" alt="Facebook"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Twitter.png" alt="Twitter"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/Instagram.png" alt="Instagram"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/LinkedIn.png" alt="LinkedIn"></a>
+                        <a href="#"><img class="object-contain object-bottom size-4 md:size-5 lg:size-6 xl:size-7 2xl:size-8" src="./assets/icons/YouTube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Product
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Features</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Pricing</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Case studies</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Reviews</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Updates</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Company
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">About</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Contact us</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Careers</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Culture</a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">Blog</a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Support
+                    </h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Getting started
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Help center
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Server status
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Report a bug
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90]">
+                        Chat support
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <h3 class="font-['Roboto'] font-bold text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl 2xl:text-[26px] mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-[#170F49]">
+                        Contact us</h3>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Email.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        contact@company.com
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Phone.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        (414) 687 - 5892
+                    </a>
+                    <span class="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-['Roboto'] font-normal text-[#6F6C90] flex flex-nowrap gap-1">
+                        <img src="./assets/icons/Mark.png" class="object-contain size-3 md:size-4 lg:size-5 xl:size-6 2xl:size-7" alt="">
+                        794 Mcallister St San Francisco, 94102
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 md:flex-row items-center  md:justify-between pb-2 md:pb-4 lg:pb-6 xl:pb-8">
+                <p class="font-['DM_Sans'] text-[#6F6C90] font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    Copyright © 2025 Darzify
+                </p>
+                <div class="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl">
+                    <span class="font-['DM_Sans'] text-[#6F6C90] font-normal ">All Rights Reserved</span>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Terms and Conditions</a>
+                    <span class="">|</span>
+                    <a href="#" class="font-['DM_Sans'] text-[#333331] font-normal ">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= Scripts ================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        // ==================== font seoul-namsan ===============
+        (function (d) {
+            var config = {
+                kitId: 'pug2vcj',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+
+        // ================ Swiper Js =====================
+
+       //  Reviews swiper
+        var swiper = new Swiper(".reviews-swiper", {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 12,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                1280: {
+                    spaceBetween: 12,
+                },
+                1024: {
+                    spaceBetween: 10,
+                },
+                768: {
+                    spaceBetween: 8,
+                },
+                0: {
+                    spaceBetween: 6,
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 .max-w-9xl {
     max-width: 1580px;
@@ -136,9 +137,6 @@ div.iti__country-container {
     white-space: wrap !important;
     width: 100% !important;
 }
-
-
-
 
 
 
