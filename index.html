@@ -51,12 +51,12 @@
                         <input type="text" placeholder="Search for ‘boutiques’" class="text-xl placeholder:text-[#6E6E6E] text-[#EAE0D6] font-['Roboto'] h-full w-full outline-none border-none hidden lg:block">
                     </div>
                     <div class="relative group ">
-                        <div class="h-6 md:h-8 lg:h-10 xl:h-12 2xl:h-14 absolute w-16 -left-5 hidden group-hover:block"></div>
+                        <!-- <div class="bg-black/50 h-6 md:h-8 lg:h-10 xl:h-12 2xl:h-14 absolute w-16 -left-5 hidden group-hover:block cursor-pointer"></div> -->
                         <button id="user-button" class="text-[#333331] bg-[#ECE6DF] cursor-pointer size-6 md:size-8 lg:size-10 xl:size-12 2xl:size-14 rounded-md md:rounded-lg lg:rounded-xl flex justify-center items-center">
                             <i class="fa-regular fa-user text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl"></i>
                         </button>
                         <!--======================== Slide Menu =======================-->
-                        <div id="user-slide-menu" class="opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-10 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto absolute z-40 right-0 pt-4">
+                        <div id="user-slide-menu" class="opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-10 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto absolute z-[999] right-0 pt-4">
                             <div class="bg-white w-full min-w-md p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-9 rounded-3xl">
                                 <div>
                                     <h3 class="font-['Roboto'] font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px] mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3 xl:mb-3.5 2xl:mb-4">Hey, User!</h3>
@@ -1464,7 +1464,7 @@
     </footer>
     
     <!-- ================= Login with Phone Modal -->
-    <div id="login-modal" class="pointer-events-none opacity-0 w-full max-w-screen max-h-screen fixed inset-0 bg-black/40 z-50 flex justify-center items-center mx-auto py-5 md:py-8 lg:py-12 xl:py-16 2xl:py-20 px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
+    <div id="login-modal" class="pointer-events-none opacity-0 transition-all duration-500 z-[1000] w-full max-w-screen max-h-screen fixed inset-0 bg-black/40 z-50 flex justify-center items-center mx-auto py-5 md:py-8 lg:py-12 xl:py-16 2xl:py-20 px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
         <div class="bg-[#ECE6DF] relative w-full max-w-sm md:max-w-2xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl max-h-[594px] rounded-2xl md:rounded-3xl lg:rounded-4xl flex">
             <button id="login-modal-xbutton" class="absolute right-5 top-3 sm:right-5 sm:top-5 md:right-7 md:top-7 cursor-pointer">
                 <i class="fa-solid fa-xmark text-xl lg:text-2xl"></i>
@@ -1639,11 +1639,34 @@
             }
         });
 
-        // User button hover effect
+        // user button hover function
+        const userButton = document.getElementById('user-button');
+        const userSlideMenu = document.getElementById('user-slide-menu');
+
+        let isSlideMenuOpen = false;
+        
+        userButton.addEventListener('click',()=>{
+            isSlideMenuOpen = !isSlideMenuOpen;
+            slideMenuToggle();
+        })
+        
+        let slideMenuToggle = ()=>{
+            if(isSlideMenuOpen){
+                userSlideMenu.classList.replace('opacity-0','opacity-100')
+                userSlideMenu.classList.replace('pointer-events-none','pointer-events-auto')
+                userSlideMenu.classList.replace('translate-y-10','translate-y-10')
+            }
+            else{
+                userSlideMenu.classList.replace('opacity-100','opacity-0')
+                userSlideMenu.classList.replace('pointer-events-auto','pointer-events-none')
+                userSlideMenu.classList.replace('translate-y-10','translate-y-0')
+            }
+        }
+        
+        // Sign in button clicked function
         const loginButton = document.getElementById('login-button');
         const loginModalXButton = document.getElementById('login-modal-xbutton');
         const loginModal = document.getElementById('login-modal');
-        console.log(loginModal.classList)
 
         let isLoginModalOpen = false;
         loginButton.addEventListener('click', ()=> {
@@ -1658,6 +1681,7 @@
             if(isLoginModalOpen){
                 loginModal.classList.replace('opacity-0','opacity-100')
                 loginModal.classList.replace('pointer-events-none','pointer-events-auto')
+                document.body.style.overflow = 'hidden';
             }
             else{
                 loginModal.classList.replace('opacity-100','opacity-0')

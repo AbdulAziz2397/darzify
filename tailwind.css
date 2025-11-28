@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -311,6 +310,12 @@
   .z-50\! {
     z-index: 50 !important;
   }
+  .z-\[999\] {
+    z-index: 999;
+  }
+  .z-\[1000\] {
+    z-index: 1000;
+  }
   .z-auto {
     z-index: auto;
   }
@@ -319,6 +324,9 @@
   }
   .col-span-3 {
     grid-column: span 3 / span 3;
+  }
+  .m-auto {
+    margin: auto;
   }
   .mx-auto {
     margin-inline: auto;
@@ -1037,6 +1045,12 @@
   .h-\[50vmin\] {
     height: 50vmin;
   }
+  .h-\[60vmin\] {
+    height: 60vmin;
+  }
+  .h-\[90vmin\] {
+    height: 90vmin;
+  }
   .h-auto {
     height: auto;
   }
@@ -1063,6 +1077,9 @@
   }
   .max-h-\[594px\] {
     max-height: 594px;
+  }
+  .max-h-\[783px\] {
+    max-height: 783px;
   }
   .max-h-\[1000px\] {
     max-height: 1000px;
@@ -1199,6 +1216,10 @@
   .min-w-md {
     min-width: var(--container-md);
   }
+  .translate-y-0 {
+    --tw-translate-y: calc(var(--spacing) * 0);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .translate-y-2 {
     --tw-translate-y: calc(var(--spacing) * 2);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -1216,9 +1237,6 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .cursor-none {
-    cursor: none;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -1355,6 +1373,9 @@
   .gap-y-5 {
     row-gap: calc(var(--spacing) * 5);
   }
+  .justify-self-end {
+    justify-self: flex-end;
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -1475,6 +1496,9 @@
   }
   .border-\[\#EFEFEF\] {
     border-color: #EFEFEF;
+  }
+  .border-black {
+    border-color: var(--color-black);
   }
   .border-transparent {
     border-color: transparent;
@@ -1826,9 +1850,6 @@
   }
   .text-\[\#00000\] {
     color: #00000;
-  }
-  .text-\[\#00000\]\/50 {
-    color: color-mix(in oklab, #00000 50%, transparent);
   }
   .text-\[\#000000\] {
     color: #000000;
@@ -6442,16 +6463,6 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-  .prose-h2\:my-2 {
-    & :is(:where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-      margin-block: calc(var(--spacing) * 2);
-    }
-  }
-  .prose-h2\:my-5 {
-    & :is(:where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-      margin-block: calc(var(--spacing) * 5);
-    }
-  }
   .prose-h2\:mt-8 {
     & :is(:where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
       margin-top: calc(var(--spacing) * 8);
@@ -6470,26 +6481,6 @@
   .prose-h3\:mb-1 {
     & :is(:where(h3):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
       margin-bottom: calc(var(--spacing) * 1);
-    }
-  }
-  .prose-h3\:mb-2 {
-    & :is(:where(h3):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-      margin-bottom: calc(var(--spacing) * 2);
-    }
-  }
-  .prose-h3\:mb-3 {
-    & :is(:where(h3):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-      margin-bottom: calc(var(--spacing) * 3);
-    }
-  }
-  .prose-p\:m-0 {
-    & :is(:where(p):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-      margin: calc(var(--spacing) * 0);
-    }
-  }
-  .prose-p\:my-0 {
-    & :is(:where(p):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-      margin-block: calc(var(--spacing) * 0);
     }
   }
   .prose-p\:my-2 {
@@ -6518,30 +6509,9 @@
       }
     }
   }
-  .prose-ul\:marker\:text-red-500 {
-    & :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-      & *::marker {
-        color: var(--color-red-500);
-      }
-      &::marker {
-        color: var(--color-red-500);
-      }
-      & *::-webkit-details-marker {
-        color: var(--color-red-500);
-      }
-      &::-webkit-details-marker {
-        color: var(--color-red-500);
-      }
-    }
-  }
   .prose-li\:my-1 {
     & :is(:where(li):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
       margin-block: calc(var(--spacing) * 1);
-    }
-  }
-  .prose-li\:list-outside {
-    & :is(:where(li):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-      list-style-position: outside;
     }
   }
   .\[\&\:\:-webkit-inner-spin-button\]\:m-0 {
