@@ -23,6 +23,10 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+     <!-- twilio CDN link for mobile inout field -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/css/intlTelInput.css">
+
+
     <!-- Title -->
     <title>Darzify</title>
 </head>
@@ -67,7 +71,7 @@
                                     </button>
                                 </div>
                                 <div class="w-full h-0.5 bg-[#E5E5E5] my-3 md:my-3.5 lg:my-4 xl:my-5 2xl:my-6"></div>
-                                <div class="flex justify-between items-center gap-4">
+                                <a href="./orders.html" class="flex justify-between items-center gap-4">
                                     <div>
                                         <h3 class="font-['Roboto'] text-[#404040] font-medium text-sm md:text-base xl:text-lg">Orders</h3>
                                         <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs lg:text-sm">Check your order status (track, return, cancel etc)</span>
@@ -87,9 +91,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                </div>
+                                </a>
                                 <div class="w-full h-0.5 bg-[#EFEFEF] my-2.5 md:my-3 lg:my-3.5 xl:my-4 2xl:my-5"></div>
-                                <div class="flex justify-between items-center gap-4">
+                                <a href="./wishlist.html" class="flex justify-between items-center gap-4">
                                     <div>
                                         <h3 class="font-['Roboto'] text-[#404040] font-medium text-sm md:text-base xl:text-lg">Wishlist</h3>
                                         <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs lg:text-sm">Buy items saved in Wishlist</span>
@@ -99,9 +103,9 @@
                                             <path d="M17.5009 0C16.3749 0.0175149 15.2734 0.331853 14.3077 0.911271C13.342 1.49069 12.5463 2.31467 12.0009 3.3C11.4556 2.31467 10.6599 1.49069 9.69417 0.911271C8.72848 0.331853 7.62698 0.0175149 6.50094 0C4.70588 0.0779907 3.01464 0.863254 1.79672 2.18423C0.578794 3.50521 -0.0668157 5.25453 0.000934853 7.05C0.000934853 13.825 10.9569 21.65 11.4229 21.982L12.0009 22.391L12.5789 21.982C13.0449 21.652 24.0009 13.825 24.0009 7.05C24.0687 5.25453 23.4231 3.50521 22.2052 2.18423C20.9872 0.863254 19.296 0.0779907 17.5009 0ZM12.0009 19.929C8.74793 17.499 2.00093 11.529 2.00093 7.05C1.93258 5.78472 2.3673 4.54373 3.2103 3.5977C4.0533 2.65167 5.23617 2.07735 6.50094 2C7.7657 2.07735 8.94857 2.65167 9.79157 3.5977C10.6346 4.54373 11.0693 5.78472 11.0009 7.05H13.0009C12.9326 5.78472 13.3673 4.54373 14.2103 3.5977C15.0533 2.65167 16.2362 2.07735 17.5009 2C18.7657 2.07735 19.9486 2.65167 20.7916 3.5977C21.6346 4.54373 22.0693 5.78472 22.0009 7.05C22.0009 11.531 15.2539 17.499 12.0009 19.929Z" fill="#333331"/>
                                         </svg>
                                     </div>
-                                </div>
+                                </a>
                                 <div class="w-full h-0.5 bg-[#EFEFEF] my-2.5 md:my-3 lg:my-3.5 xl:my-4 2xl:my-5"></div>
-                                <div class="flex justify-between items-center gap-4">
+                                <a href="./address.html" class="flex justify-between items-center gap-4">
                                     <div>
                                         <h3 class="font-['Roboto'] text-[#404040] font-medium text-sm md:text-base xl:text-lg">Address</h3>
                                         <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs lg:text-sm">Manage your saved addresses</span>
@@ -119,9 +123,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                </div>
+                                </a>
                                 <div class="w-full h-0.5 bg-[#EFEFEF] my-2.5 md:my-3 lg:my-3.5 xl:my-4 2xl:my-5"></div>
-                                <div class="flex justify-between items-center gap-4">
+                                <a href="./help-center.html" class="flex justify-between items-center gap-4">
                                     <div>
                                         <h3 class="font-['Roboto'] text-[#404040] font-medium text-sm md:text-base xl:text-lg">Help Center</h3>
                                         <span class="font-['Roboto'] text-[#6E6E6E] font-normal text-xs lg:text-sm">FAQs, Customer Support</span>
@@ -140,7 +144,7 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1502,9 +1506,9 @@
                         </div>
 
                         <div class="w-full flex justify-center mx-auto gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
-                            <a href="#" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
+                            <button id="email-button" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
                                 <img src="./assets/icons/mail.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5" alt="">
-                            </a>
+                            </button>
                             <a href="#" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
                                 <img src="./assets/icons/google.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5" alt="">
                             </a>
@@ -1534,6 +1538,9 @@
 
     <!-- ================= Scripts ================== -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- twilio script for mobile inout field -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/intlTelInput.min.js"></script>
+
     <script>
         // ==================== font seoul-namsan ===============
         (function (d) {
@@ -1708,6 +1715,36 @@
                 LoginModalFunction();
         });
 
+    </script>
+    <script>
+        const input = document.querySelector("#phone");
+        const output = document.querySelector("#output");
+
+        const iti = window.intlTelInput(input, {
+            initialCountry: "in",
+            nationalMode: true,
+            loadUtils: () => import("/intl-tel-input/js/utils.js?1761771962076"), // for formatting/placeholders etc
+            separateDialCode: true,
+            loadUtils: () => import("/intl-tel-input/js/utils.js?1761771962076"), // for formatting/placeholders etc
+        });
+
+        const handleChange = () => {
+            let text;
+            if (input.value) {
+                text = iti.isValidNumber()
+                    ? "Valid number! Full international format: " + iti.getNumber()
+                    : "Invalid number - please try again";
+            } else {
+                text = "Please enter a valid number below";
+            }
+            const textNode = document.createTextNode(text);
+            output.innerHTML = "";
+            output.appendChild(textNode);
+        };
+
+        // listen to "keyup", but also "change" to update when the user selects a country
+        input.addEventListener('change', handleChange);
+        input.addEventListener('keyup', handleChange);
     </script>
 
 </body>
