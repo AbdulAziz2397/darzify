@@ -1469,9 +1469,6 @@
     <!-- ================= Login with Phone Modal -->
     <div id="login-modal" class="pointer-events-none opacity-0 transition-all duration-500 z-[1000] w-full max-w-screen max-h-screen fixed inset-0 bg-black/40 z-50 flex justify-center items-center mx-auto py-5 md:py-8 lg:py-12 xl:py-16 2xl:py-20 px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-40">
         <div id="login-inner" class="bg-[#ECE6DF] relative w-full max-w-sm md:max-w-2xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl max-h-[594px] rounded-2xl md:rounded-3xl lg:rounded-4xl flex">
-            <button id="login-modal-xbutton" class="absolute right-5 top-3 sm:right-5 sm:top-5 md:right-7 md:top-7 cursor-pointer">
-                <i class="fa-solid fa-xmark text-xl lg:text-2xl"></i>
-            </button>
             <div class="w-1/2 relative hidden md:block overflow-hidden z-10">
                 <div class="absolute w-1/3 h-full right-0 bg-[linear-gradient(to_right,transparent,#ECE6DF)] z-40"></div>
                 <img src="./assets/images/login-overly.jpg" class="absolute size-full opacity-20 inset-0 z-30 rounded-4xl" alt="">
@@ -1484,7 +1481,10 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 flex flex-col p-5 sm:p-7 md:py-10">
-                <form class="w-full h-full flex flex-col justify-between gap-5">
+                <button id="login-modal-xbutton" class="absolute right-5 top-3 sm:right-5 sm:top-5 md:right-7 md:top-7 cursor-pointer">
+                    <i class="fa-solid fa-xmark text-xl lg:text-2xl"></i>
+                </button>
+                <form id="phone-login" class="w-full h-full flex flex-col justify-between gap-5">
                     <div class="flex flex-col gap-y-5 xl:gap-y-8">
                         <div>
                             <h3 class="font-['Roboto'] font-bold text-2xl lg:text-3xl xl:text-4xl mb-2">Get Started Now</h3>
@@ -1506,8 +1506,55 @@
                         </div>
 
                         <div class="w-full flex justify-center mx-auto gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
-                            <button id="email-button" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
+                            <button id="email-form-btn" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
                                 <img src="./assets/icons/mail.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5" alt="">
+                            </button>
+                            <a href="#" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
+                                <img src="./assets/icons/google.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex mt-3 font-['Roboto'] items-center font-normal text-xs lg:text-sm text-nowrap flex-nowrap">
+                            <div class="mb-auto">
+                                <img src="./assets/icons/group 14.png" class="size-3.5 lg:size-5 object-contain mt-0.5 mr-2" alt="">
+                            </div>
+                            <p>
+                                By continuing, you agree to our <span class="ml-1 font-semibold text-wrap"> Terms of Use & Privacy Policy</span>
+                            </p>
+                        </div>
+                        
+                        <button class="mt-2.5 sm:mt-3 md:mt-3.5 lg:mt-4 xl:mt-5 w-full text-center py-2.5 md:py-3 lg:py-3.5 xl:py-4  bg-[#333331] cursor-pointer rounded-full text-white font-semibold text-xs md:text-sm lg:text-base xl:text-lg">
+                            Send OTP
+                        </button>
+                    </div>
+
+                </form>
+                <form id="email-login" class=" w-full h-full hidden flex-col justify-between gap-5">
+                    <div class="flex flex-col gap-y-5 xl:gap-y-8">
+                        <div>
+                            <h3 class="font-['Roboto'] font-bold text-2xl lg:text-3xl xl:text-4xl mb-2">Get Started Now</h3>
+                            <p class="font-['Roboto'] font-normal text-xs md:text-sm lg:text-base xl:text-lg text-[#5D5D5D]">
+                                Create an account or log in to explore our app
+                            </p>
+                        </div>
+
+                        <div class="w-full flex items-center border-2 rounded-full pl-5">
+                            <img src="./assets/icons/mail.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5 mr-5" alt="">
+                            <input id="phone" placeholder="Email Address" class="w-full py-2 md:py-2.5 lg:py-3 xl:py-4 font-['Roboto'] outline-none [appearance:textfield]
+                            placeholder:text-[#5D5D5D]" type="email">
+                        </div>
+
+                        <div class="w-full flex items-center gap-2.5">
+                            <div class="w-full border-t border-transparent [border-image:linear-gradient(to_right,transparent,#333331)_1]"></div>
+                            <span class="text-nowrap">Or use</span>
+                            <div class="w-full border-t border-transparent [border-image:linear-gradient(to_left,transparent,#333331)_1]"></div>
+                        </div>
+
+                        <div class="w-full flex justify-center mx-auto gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
+                            <button id="phone-form-btn" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
+                                <img src="./assets/icons/phone-call.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5" alt="">
                             </button>
                             <a href="#" class="size-8 sm:size-10 md:size-12 lg:size-14 xl:size-16 cursor-pointer bg-[#DAD4CE] rounded-full flex justify-center items-center">
                                 <img src="./assets/icons/google.png" class="size-4 sm:size-4.5 md:size-5 lg:size-6 xl:size-6.5" alt="">
@@ -1714,6 +1761,32 @@
                 isLoginModalOpen = false;
                 LoginModalFunction();
         });
+
+        // Toggle login form
+        let emailFormButton = document.getElementById('email-form-btn');
+        let phoneFormButton = document.getElementById('phone-form-btn');
+
+        let LoginWithPhoneForm = document.getElementById('phone-login');
+        let LoginWithEmailForm = document.getElementById('email-login');
+
+        // Show Email Login Form
+        emailFormButton.addEventListener('click', () => {
+            LoginWithEmailForm.classList.remove('hidden');
+            LoginWithEmailForm.classList.add('flex');
+
+            LoginWithPhoneForm.classList.add('hidden');
+            LoginWithPhoneForm.classList.remove('flex');
+        });
+
+        // Show Phone Login Form
+        phoneFormButton.addEventListener('click', () => {
+            LoginWithPhoneForm.classList.remove('hidden');
+            LoginWithPhoneForm.classList.add('flex');
+
+            LoginWithEmailForm.classList.add('hidden');
+            LoginWithEmailForm.classList.remove('flex');
+        });
+
 
     </script>
     <script>
