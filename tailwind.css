@@ -328,9 +328,6 @@
   .col-span-3 {
     grid-column: span 3 / span 3;
   }
-  .col-end-1 {
-    grid-column-end: 1;
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -1012,9 +1009,6 @@
   .h-3\/4 {
     height: calc(3/4 * 100%);
   }
-  .h-4\/5 {
-    height: calc(4/5 * 100%);
-  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -1069,17 +1063,11 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
-  .max-h-1\/4 {
-    max-height: calc(1/4 * 100%);
-  }
   .max-h-4\/5 {
     max-height: calc(4/5 * 100%);
   }
   .max-h-\[350px\] {
     max-height: 350px;
-  }
-  .max-h-\[428px\] {
-    max-height: 428px;
   }
   .max-h-\[430px\] {
     max-height: 430px;
@@ -1767,6 +1755,9 @@
   .text-start {
     text-align: start;
   }
+  .align-middle {
+    vertical-align: middle;
+  }
   .font-\[\'DM_Sans\'\] {
     font-family: 'DM Sans';
   }
@@ -2448,9 +2439,24 @@
       background-color: #333331;
     }
   }
+  .focus\:bg-transparent {
+    &:focus {
+      background-color: transparent;
+    }
+  }
   .focus\:px-5 {
     &:focus {
       padding-inline: calc(var(--spacing) * 5);
+    }
+  }
+  .focus\:text-\[\#333331\] {
+    &:focus {
+      color: #333331;
+    }
+  }
+  .focus\:text-\[\#ECE6DF\] {
+    &:focus {
+      color: #ECE6DF;
     }
   }
   .focus\:text-\[\#FF383C\] {
@@ -2467,6 +2473,26 @@
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
+    }
+  }
+  .active\:bg-\[\#333331\] {
+    &:active {
+      background-color: #333331;
+    }
+  }
+  .active\:bg-transparent {
+    &:active {
+      background-color: transparent;
+    }
+  }
+  .active\:text-\[\#333331\] {
+    &:active {
+      color: #333331;
+    }
+  }
+  .active\:text-\[\#ECE6DF\] {
+    &:active {
+      color: #ECE6DF;
     }
   }
   .aria-selected\:bg-\[\#333331\] {
@@ -4340,11 +4366,6 @@
       max-height: 545px;
     }
   }
-  .lg\:max-h-\[590px\] {
-    @media (width >= 64rem) {
-      max-height: 590px;
-    }
-  }
   .lg\:w-1\/2 {
     @media (width >= 64rem) {
       width: calc(1/2 * 100%);
@@ -5292,11 +5313,6 @@
   .xl\:max-h-\[640px\] {
     @media (width >= 80rem) {
       max-height: 640px;
-    }
-  }
-  .xl\:max-h-\[700px\] {
-    @media (width >= 80rem) {
-      max-height: 700px;
     }
   }
   .xl\:w-2xs {
